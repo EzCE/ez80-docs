@@ -24,6 +24,11 @@ enableRobotsTXT = true
 
 [taxonomies]
    tag = "tags"
+ 
+[params]
+  geekdocBreadcrumb = true
+  geekdocRepo = "https://github.com/EzCE/ez80-docs"
+  geekdocEditPath = "edit/main"
 
 [params.geekdocContentLicense]
     name = "AGPL-3.0"
