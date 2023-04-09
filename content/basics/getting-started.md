@@ -14,13 +14,13 @@ To start writing and compiling programs, you'll need to have a way to compile th
 1. Download the latest version of the flat assembler g (fasmg) from its website [here](https://flatassembler.net/download.php). It will probably be at the very bottom of the page.
 2. Extract the downloaded zip and find the version for your OS. If you're confused, this handy chart will help you pick the one that's right for you:
 
-| File Name              | Platform       |
-|------------------------|----------------|
-| fasmg.exe              | Windows        |
-| fasmg                  | Linux (32-Bit) |
-| fasmg.x64              | Linux (64-Bit) |
-| source/macos/fasmg     | macOS (32-Bit) |
-| source/macos/x64/fasmg | macOS (64-Bit) |
+| File Name              | Platform                                                             |
+|------------------------|----------------------------------------------------------------------|
+| fasmg.exe              | Windows                                                              |
+| fasmg                  | Linux (32-Bit)                                                       |
+| fasmg.x64              | Linux (64-Bit)                                                       |
+| source/macos/fasmg     | macOS (32-Bit)                                                       |
+| source/macos/x64/fasmg | macOS (64-Bit) (You almost certainly have this one if you use macOS) |
 
 3. The next step will vary depending on your OS as well:
 
