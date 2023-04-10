@@ -97,4 +97,4 @@ Now that we have a way to build our programs, we need a way to test them! While 
 
 1. First, download the latest nightly build of CEmu for your operating system [here](https://github.com/CE-Programming/CEmu/releases/tag/nightly).
 2. Open and run CEmu, and you should be greeted with a welcome menu. Click "Create a ROM image from your calculator" and follow the steps to generate a ROM. CEmu will automatically load this ROM in the future unless you delete it.
-3. Congratulations! You have succesfully set up CEmu and are ready to begin writing your first program!
+3. Congratulations! You have succesfully set up CEmu and are ready to begin writing [your first program!](../your-first-program)
