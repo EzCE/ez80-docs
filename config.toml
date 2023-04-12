@@ -2,6 +2,7 @@ baseURL = 'https://ezce.github.io/ez80-docs/'
 languageCode = 'en-us'
 title = 'ez80 docs'
 theme = "hugo-geekdoc"
+ignorefiles = [ "content/instructions/readme.md" ]
 
 pluralizeListTitles = false
 
