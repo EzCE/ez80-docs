@@ -194,7 +194,7 @@ Stores `reg8` into the address pointed to by `imm24`.
 {{< /expand >}}
 
 {{< expand "ld  a, regir" "..." >}}
-Stores the value of `regir` into `reg8`
+Stores the value of `regir` into `reg8`.
 * Opcode: `11101101` `0101` `regir` `111`
     | Register | Bit Field |
     |----------|-----------|
@@ -205,5 +205,17 @@ Stores the value of `regir` into `reg8`
     * S: Affected by the loaded value
     * Z: Affected by the loaded value
     * P: Interrupt flag state
+* Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld  regir, a" "..." >}}
+Stores the value of `reg8` into `regir`.
+* Opcode: `11101101` `0100` `regir` `111`
+    | Register | Bit Field |
+    |----------|-----------|
+    | `i`      | `0`       |
+    | `r`      | `1`       |
+* Bytes: 2
+* Flags: None
 * Cycles: 2F
 {{< /expand >}}
