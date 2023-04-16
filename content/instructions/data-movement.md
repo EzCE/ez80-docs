@@ -33,7 +33,7 @@ Exchanges the contents of `de` and `hl`.
 
 {{< expand "ex (sp), ix" "..." >}}
 Exchanges the word of memory pointed to by `sp` with `ix`.
-* Opcode: `1101110111100011`
+* Opcode: `11011101` `11100011`
 * Bytes: 2
 * Flags: None
 * Cycles: 2F+3R+3W
@@ -41,7 +41,7 @@ Exchanges the word of memory pointed to by `sp` with `ix`.
 
 {{< expand "ex (sp), iy" "..." >}}
 Exchanges the word of memory pointed to by `sp` with `iy`.
-* Opcode: `1111110111100011`
+* Opcode: `11111101` `11100011`
 * Bytes: 2
 * Flags: None
 * Cycles: 2F+3R+3W
@@ -218,4 +218,226 @@ Stores the value of `reg8` into `regir`.
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld  reg24, imm24" "..." >}}
+Stores `imm24` into `reg24`.
+* Opcode: `00` `reg24` `0001` `imm24`
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+    | `sp`     | `11`      |
+* Bytes: 4
+* Flags: None
+* Cycles: 4F
+{{< /expand >}}
+
+{{< expand "ld  regi, imm24" "..." >}}
+Stores `imm24` into `regi`.
+* Opcode: `regi` `00100001` `imm24`
+    | Register | Bit Field  |
+    |----------|------------|
+    | `ix`     | `11011101` |
+    | `iy`     | `11111101` |
+* Bytes: 5
+* Flags: None
+* Cycles: 5F
+{{< /expand >}}
+
+{{< expand "ld  hl, (imm24)" "..." >}}
+Stores the value pointed to by `imm24` into `hl`.
+* Opcode: `00101010` `imm24`
+* Bytes: 4
+* Flags: None
+* Cycles: 4F+3R
+{{< /expand >}}
+
+{{< expand "ld  reg24, (imm24)" "..." >}}
+Stores the value pointed to by `imm24` into `reg24`.
+* Opcode: `11101101` `01` `reg24` `1011` `imm24`
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+    | `sp`     | `11`      |
+* Bytes: 5
+* Flags: None
+* Cycles: 5F+3R
+{{< /expand >}}
+
+{{< expand "ld  regi, (imm24)" "..." >}}
+Stores the value pointed to by `imm24` into `regi`.
+* Opcode: `regi` `00101010` `imm24`
+    | Register | Bit Field  |
+    |----------|------------|
+    | `ix`     | `11011101` |
+    | `iy`     | `11111101` |
+* Bytes: 5
+* Flags: None
+* Cycles: 5F+3R
+{{< /expand >}}
+
+{{< expand "ld  (imm24), hl" "..." >}}
+Stores `hl` to the address pointed to by `imm24`.
+* Opcode: `00100010` `imm24`
+* Bytes: 4
+* Flags: None
+* Cycles: 4F+3W
+{{< /expand >}}
+
+{{< expand "ld  (imm24), reg24" "..." >}}
+Stores `reg24` to the address pointed to by `imm24`.
+* Opcode: `11101101` `01` `reg24` `0011` `imm24`
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+    | `sp`     | `11`      |
+* Bytes: 5
+* Flags: None
+* Cycles: 5F+3W
+{{< /expand >}}
+
+{{< expand "ld  (imm24), regi" "..." >}}
+Stores `regi` to the address pointed to by `imm24`.
+* Opcode: `regi` `00100010` `imm24`
+    | Register | Bit Field  |
+    |----------|------------|
+    | `ix`     | `11011101` |
+    | `iy`     | `11111101` |
+* Bytes: 5
+* Flags: None
+* Cycles: 5F+3W
+{{< /expand >}}
+
+{{< expand "ld  sp, hl" "..." >}}
+Stores `hl` into `sp`.
+* Opcode: `11111001`
+* Bytes: 1
+* Flags: None
+* Cycles: 1F
+{{< /expand >}}
+
+{{< expand "ld  sp, regi" "..." >}}
+Stores `regi` into `sp`.
+* Opcode: `regi` `11111001`
+    | Register | Bit Field  |
+    |----------|------------|
+    | `ix`     | `11011101` |
+    | `iy`     | `11111101` |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F
+{{< /expand >}}
+
+## LDD
+
+{{< expand "ldd" "..." >}}
+Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl`, `de`, and `bc` are decremented.
+* Opcode: `11101101` `10101000`
+* Bytes: 2
+* Flags:
+    * H: Reset
+    * N: Reset
+    * P/V: Reset if `bc` becomes zero
+* Cycles: 2F+1R+1W+1
+{{< /expand >}}
+
+## LDDR
+
+{{< expand "lddr" "..." >}}
+Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl`, `de`, and `bc` are decremented. If `bc` is not zero, this operation is repeated. Interrupts can trigger between repetitions.
+* Opcode: `11101101` `10111000`
+* Bytes: 2
+* Flags:
+    * H: Reset
+    * N: Reset
+    * P/V: Reset
+* Cycles: 2F+(1R+1W+1)*bc
+{{< /expand >}}
+
+## LDI
+
+{{< expand "ldi" "..." >}}
+Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl` and `de` are incremented and `bc` is decremented.
+* Opcode: `11101101` `10100000`
+* Bytes: 2
+* Flags:
+    * H: Reset
+    * N: Reset
+    * P/V: Reset if `bc` becomes zero
+* Cycles: 2F+1R+1W+1
+{{< /expand >}}
+
+## LDIR
+
+{{< expand "ldir" "..." >}}
+Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl` and `de` are incremented and `bc` is decremented. If `bc` is not zero, this operation is repeated. Interrupts can trigger between repetitions.
+* Opcode: `11101101` `10110000`
+* Bytes: 2
+* Flags:
+    * H: Reset
+    * N: Reset
+    * P/V: Reset
+* Cycles: 2F+(1R+1W+1)*bc
+{{< /expand >}}
+
+## POP
+
+{{< expand "pop reg24" "..." >}}
+The word of memory pointed to by `sp` is stored into `reg24` and `sp` is incremented by the word size.
+* Opcode: `11` `reg24` `0001`
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+    | `af`     | `11`      |
+* Bytes: 1
+* Flags: None
+* Cycles: 1F+3R
+{{< /expand >}}
+
+{{< expand "pop regi" "..." >}}
+The word of memory pointed to by `sp` is stored into `regi` and `sp` is incremented by the word size.
+* Opcode: `regi` `11100001`
+    | Register | Bit Field  |
+    |----------|------------|
+    | `ix`     | `11011101` |
+    | `iy`     | `11111101` |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F+3R
+{{< /expand >}}
+
+## PUSH
+
+{{< expand "push reg24" "..." >}}
+`sp` is decremented by the word size and `reg24` is stored into the word of memory pointed to by `sp`.
+* Opcode: `11` `reg24` `0101`
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+    | `af`     | `11`      |
+* Bytes: 1
+* Flags: None
+* Cycles: 1F+3W
+{{< /expand >}}
+
+{{< expand "push regi" "..." >}}
+`sp` is decremented by the word size and `regi` is stored into the word of memory pointed to by `sp`.
+* Opcode: `regi` `11100101`
+    | Register | Bit Field  |
+    |----------|------------|
+    | `ix`     | `11011101` |
+    | `iy`     | `11111101` |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F+3W
 {{< /expand >}}
