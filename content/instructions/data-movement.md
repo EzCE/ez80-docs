@@ -237,10 +237,10 @@ Stores `imm24` into `reg24`.
 {{< expand "ld  regi, imm24" "..." >}}
 Stores `imm24` into `regi`.
 * Opcode: `regi` `00100001` `imm24`
-    | Register | Bit Field  |
-    |----------|------------|
-    | `ix`     | `11011101` |
-    | `iy`     | `11111101` |
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
 * Bytes: 5
 * Flags: None
 * Cycles: 5F
@@ -271,10 +271,10 @@ Stores the value pointed to by `imm24` into `reg24`.
 {{< expand "ld  regi, (imm24)" "..." >}}
 Stores the value pointed to by `imm24` into `regi`.
 * Opcode: `regi` `00101010` `imm24`
-    | Register | Bit Field  |
-    |----------|------------|
-    | `ix`     | `11011101` |
-    | `iy`     | `11111101` |
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
 * Bytes: 5
 * Flags: None
 * Cycles: 5F+3R
@@ -305,10 +305,10 @@ Stores `reg24` to the address pointed to by `imm24`.
 {{< expand "ld  (imm24), regi" "..." >}}
 Stores `regi` to the address pointed to by `imm24`.
 * Opcode: `regi` `00100010` `imm24`
-    | Register | Bit Field  |
-    |----------|------------|
-    | `ix`     | `11011101` |
-    | `iy`     | `11111101` |
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
 * Bytes: 5
 * Flags: None
 * Cycles: 5F+3W
@@ -325,10 +325,118 @@ Stores `hl` into `sp`.
 {{< expand "ld  sp, regi" "..." >}}
 Stores `regi` into `sp`.
 * Opcode: `regi` `11111001`
-    | Register | Bit Field  |
-    |----------|------------|
-    | `ix`     | `11011101` |
-    | `iy`     | `11111101` |
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld  regih, imm8" "..." >}}
+Stores `imm8` into the high byte of `regi`.
+* Opcode: `regi` `00100110` `imm8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F
+{{< /expand >}}
+
+{{< expand "ld  regil, imm8" "..." >}}
+Stores `imm8` into the low byte of `regi`.
+* Opcode: `regi` `00101110` `imm8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F
+{{< /expand >}}
+
+{{< expand "ld  reg8, regih" "..." >}}
+Stores the high byte of `regi` into `reg8`.
+* Opcode: `regi` `01100` `reg8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+
+    | Register | Bit Field |
+    |----------|-----------|
+    | `a`      | `111`     |
+    | `b`      | `000`     |
+    | `c`      | `001`     |
+    | `d`      | `010`     |
+    | `e`      | `011`     |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld  reg8, regil" "..." >}}
+Stores the low byte of `regi` into `reg8`.
+* Opcode: `regi` `01101` `reg8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+
+    | Register | Bit Field |
+    |----------|-----------|
+    | `a`      | `111`     |
+    | `b`      | `000`     |
+    | `c`      | `001`     |
+    | `d`      | `010`     |
+    | `e`      | `011`     |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld  regih, reg8" "..." >}}
+Stores `reg8` into the high byte of `regi`.
+* Opcode: `regi` `01100` `reg8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+
+    | Register | Bit Field |
+    |----------|-----------|
+    | `a`      | `111`     |
+    | `b`      | `000`     |
+    | `c`      | `001`     |
+    | `d`      | `010`     |
+    | `e`      | `011`     |
+    | `ixh`    | `100`     |
+    | `ixl`    | `101`     |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld  regil, reg8" "..." >}}
+Stores `reg8` into the low byte of `regi`.
+* Opcode: `regi` `01101` `reg8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+
+    | Register | Bit Field |
+    |----------|-----------|
+    | `a`      | `111`     |
+    | `b`      | `000`     |
+    | `c`      | `001`     |
+    | `d`      | `010`     |
+    | `e`      | `011`     |
+    | `ixh`    | `100`     |
+    | `ixl`    | `101`     |
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
