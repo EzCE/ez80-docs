@@ -335,8 +335,8 @@ Stores `regi` into `sp`.
 {{< /expand >}}
 
 {{< expand "ld  regih, imm8" "..." >}}
-Stores `imm8` into the high byte of `regi`.
-* Opcode: `regi` `00100110` `imm8`
+Stores `imm8` into the high byte of `regih`.
+* Opcode: `regih` `00100110` `imm8`
     | Index | Bit Field  |
     |-------|------------|
     | `ixh` | `11011101` |
@@ -347,8 +347,8 @@ Stores `imm8` into the high byte of `regi`.
 {{< /expand >}}
 
 {{< expand "ld  regil, imm8" "..." >}}
-Stores `imm8` into the low byte of `regi`.
-* Opcode: `regi` `00101110` `imm8`
+Stores `imm8` into the low byte of `regil`.
+* Opcode: `regil` `00101110` `imm8`
     | Index | Bit Field  |
     |-------|------------|
     | `ixl` | `11011101` |
@@ -359,8 +359,8 @@ Stores `imm8` into the low byte of `regi`.
 {{< /expand >}}
 
 {{< expand "ld  reg8, regih" "..." >}}
-Stores the high byte of `regi` into `reg8`.
-* Opcode: `regi` `01100` `reg8`
+Stores the high byte of `regih` into `reg8`.
+* Opcode: `regih` `01100` `reg8`
     | Index | Bit Field  |
     |-------|------------|
     | `ixh` | `11011101` |
@@ -381,8 +381,8 @@ Stores the high byte of `regi` into `reg8`.
 {{< /expand >}}
 
 {{< expand "ld  reg8, regil" "..." >}}
-Stores the low byte of `regi` into `reg8`.
-* Opcode: `regi` `01101` `reg8`
+Stores the low byte of `regil` into `reg8`.
+* Opcode: `regil` `01101` `reg8`
     | Index | Bit Field  |
     |-------|------------|
     | `ixl` | `11011101` |
@@ -403,8 +403,8 @@ Stores the low byte of `regi` into `reg8`.
 {{< /expand >}}
 
 {{< expand "ld  regih, reg8" "..." >}}
-Stores `reg8` into the high byte of `regi`.
-* Opcode: `regi` `01100` `reg8`
+Stores `reg8` into the high byte of `regih`.
+* Opcode: `regih` `01100` `reg8`
     | Index | Bit Field  |
     |-------|------------|
     | `ixh` | `11011101` |
@@ -425,8 +425,8 @@ Stores `reg8` into the high byte of `regi`.
 {{< /expand >}}
 
 {{< expand "ld  regil, reg8" "..." >}}
-Stores `reg8` into the low byte of `regi`.
-* Opcode: `regi` `01101` `reg8`
+Stores `reg8` into the low byte of `regil`.
+* Opcode: `regil` `01101` `reg8`
     | Index | Bit Field  |
     |-------|------------|
     | `ixl` | `11011101` |
