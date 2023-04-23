@@ -339,8 +339,8 @@ Stores `imm8` into the high byte of `regi`.
 * Opcode: `regi` `00100110` `imm8`
     | Index | Bit Field  |
     |-------|------------|
-    | `ix`  | `11011101` |
-    | `iy`  | `11111101` |
+    | `ixh` | `11011101` |
+    | `iyh` | `11111101` |
 * Bytes: 3
 * Flags: None
 * Cycles: 3F
@@ -351,8 +351,8 @@ Stores `imm8` into the low byte of `regi`.
 * Opcode: `regi` `00101110` `imm8`
     | Index | Bit Field  |
     |-------|------------|
-    | `ix`  | `11011101` |
-    | `iy`  | `11111101` |
+    | `ixl` | `11011101` |
+    | `iyl` | `11111101` |
 * Bytes: 3
 * Flags: None
 * Cycles: 3F
@@ -363,8 +363,8 @@ Stores the high byte of `regi` into `reg8`.
 * Opcode: `regi` `01100` `reg8`
     | Index | Bit Field  |
     |-------|------------|
-    | `ix`  | `11011101` |
-    | `iy`  | `11111101` |
+    | `ixh` | `11011101` |
+    | `iyh` | `11111101` |
 
     | Register | Bit Field |
     |----------|-----------|
@@ -373,6 +373,8 @@ Stores the high byte of `regi` into `reg8`.
     | `c`      | `001`     |
     | `d`      | `010`     |
     | `e`      | `011`     |
+    | `ixh/iyh`| `100`     |
+    | `ixl/iyl`| `101`     |
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
@@ -383,8 +385,8 @@ Stores the low byte of `regi` into `reg8`.
 * Opcode: `regi` `01101` `reg8`
     | Index | Bit Field  |
     |-------|------------|
-    | `ix`  | `11011101` |
-    | `iy`  | `11111101` |
+    | `ixl` | `11011101` |
+    | `iyl` | `11111101` |
 
     | Register | Bit Field |
     |----------|-----------|
@@ -393,6 +395,8 @@ Stores the low byte of `regi` into `reg8`.
     | `c`      | `001`     |
     | `d`      | `010`     |
     | `e`      | `011`     |
+    | `ixh/iyh`| `100`     |
+    | `ixl/iyl`| `101`     |
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
@@ -403,8 +407,8 @@ Stores `reg8` into the high byte of `regi`.
 * Opcode: `regi` `01100` `reg8`
     | Index | Bit Field  |
     |-------|------------|
-    | `ix`  | `11011101` |
-    | `iy`  | `11111101` |
+    | `ixh` | `11011101` |
+    | `iyh` | `11111101` |
 
     | Register | Bit Field |
     |----------|-----------|
@@ -413,8 +417,8 @@ Stores `reg8` into the high byte of `regi`.
     | `c`      | `001`     |
     | `d`      | `010`     |
     | `e`      | `011`     |
-    | `ixh`    | `100`     |
-    | `ixl`    | `101`     |
+    | `ixh/iyh`| `100`     |
+    | `ixl/iyl`| `101`     |
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
@@ -425,8 +429,8 @@ Stores `reg8` into the low byte of `regi`.
 * Opcode: `regi` `01101` `reg8`
     | Index | Bit Field  |
     |-------|------------|
-    | `ix`  | `11011101` |
-    | `iy`  | `11111101` |
+    | `ixl` | `11011101` |
+    | `iyl` | `11111101` |
 
     | Register | Bit Field |
     |----------|-----------|
@@ -435,8 +439,8 @@ Stores `reg8` into the low byte of `regi`.
     | `c`      | `001`     |
     | `d`      | `010`     |
     | `e`      | `011`     |
-    | `ixh`    | `100`     |
-    | `ixl`    | `101`     |
+    | `ixh/iyh`| `100`     |
+    | `ixl/iyl`| `101`     |
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
