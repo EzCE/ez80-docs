@@ -7,7 +7,7 @@ weight: -20
 
 ## Introduction
 
-This page contains information on the flags available on the TI-84 Plus CE, and is based on the lesson "Day 4: Flags" from *Learn TI-83 Plus Assembly In 28 Days*. The flags are stored in the F register, with each bit representing a certain flag. When a flag is set, the bit is equal to 1, and when a flag is reset, the bit is equal to 0. Below is a map with each bit and the flag it represents:
+This page contains information on the flags available on the TI-84 Plus CE, and is based on the lesson "Day 4: Flags" from [*Learn TI-83 Plus Assembly In 28 Days*](https://taricorp.gitlab.io/83pa28d/index.html). The flags are stored in the F register, with each bit representing a certain flag. When a flag is set, the bit is equal to 1, and when a flag is reset, the bit is equal to 0. Below is a map with each bit and the flag it represents:
 
 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 |---|---|---|---|---|---|---|---|
