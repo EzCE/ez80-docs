@@ -202,9 +202,11 @@ Stores the value of `regir` into `reg8`.
     | `r`      | `1`       |
 * Bytes: 2
 * Flags: 
-    * S: Affected by the loaded value
-    * Z: Affected by the loaded value
-    * P: Interrupt flag state
+    * S: Affected as [defined](../flags/#s-sign)
+    * Z: Affected by [defined](../flags/#z-zero)
+    * H: Reset
+    * N: Reset
+    * P/V: Interrupt flag state
 * Cycles: 2F
 {{< /expand >}}
 
