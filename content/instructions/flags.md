@@ -25,11 +25,11 @@ If the last instruction caused a register to equal zero, this flag is set. Other
 
 ## H (Half-Carry)
 
-This flag functions nearly identically to `c`, though the carry is instead detected in the least-significant nibble. It is almost never used.
+This flag functions nearly identically to `c`, though the carry is instead detected in the nibble beginning at bit 12 (regardless of 16 or 24 bit adds). It is almost never used.
 
 ## P / V (Parity / Overflow)
 
-This flag checks both parity and overflow (as the name implies). An overflow occurs when a register has a value exceeding the signed 8-bit range, which will cause this to be set. For the parity, the flag will be set when the number of 1s in the accumulator is even, and reset when it is odd. Whether the flag reflects parity or overflow will depend on the instruction being used.
+This flag checks both parity and overflow (as the name implies). A signed overflow occurs when the result of an addition exceeds the signed 8-bit or 24-bit range, and applies to the same functions as the `s` flag. When the overflow occurs, the flag will be set. For the parity, the flag will be set when the number of 1s in the accumulator is even, and reset when it is odd. Whether the flag reflects parity or overflow will depend on the instruction being used.
 
 ## N (Add / Subtract)
 
@@ -37,4 +37,4 @@ This flag is reset if the last instruction used was an addition instruction, and
 
 ## C (Carry)
 
-This flag is similar to `p/v`, with the difference being that `p/v` detects signed overflows, while `c` detects unsigned overflows. If the result of an addition was too large to fit in an 8-bit or 16-bit register, this flag is set. It is also set if the result of a subtraction was negative.
+This flag is similar to `p/v`, with the difference being that `p/v` detects signed overflows, while `c` detects unsigned overflows. If the result of an addition was too large to fit in an 8-bit or 24-bit register, this flag is set. It is also set if the result of a subtraction was negative.

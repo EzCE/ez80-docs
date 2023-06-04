@@ -448,6 +448,106 @@ Stores `reg8` into the low byte of `regil`.
 * Cycles: 2F
 {{< /expand >}}
 
+{{< expand "ld  a, mb" "..." >}}
+Stores the value of `mb` into `a`.
+* Opcode: `11101101` `01101110`
+* Bytes: 2
+* Flags: None
+* Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld  mb, a" "..." >}}
+Stores the value of `a` into `mb`.
+* Opcode: `11101101` `01101101`
+* Bytes: 2
+* Flags: None
+* Cycles: 2F
+{{< /expand >}}
+
+{{< expand "ld reg24, (regi + ofs8)" "..." >}}
+Loads the word of memory pointed to by `regi` + `ofs8` into `reg24`.
+* Opcode: `regi` `00` `reg24` `0111` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F + 3R
+{{< /expand >}}
+
+{{< expand "ld (regi + ofs8), reg24" "..." >}}
+Stores `reg24` into the word of memory pointed to by `regi` + `ofs8`.
+* Opcode: `regi` `00` `reg24` `1111` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `11011101` |
+    | `iy`  | `11111101` |
+
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F + 3W
+{{< /expand >}}
+
+{{< expand "ld regi, (ix + ofs8)" "..." >}}
+Loads `regi` with the word of memory pointed to by `ix` plus `ofs8`.
+* Opcode: `11011101` `regi` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `00110111` |
+    | `iy`  | `00110001` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F + 3R
+{{< /expand >}}
+
+{{< expand "ld regi, (iy + ofs8)" "..." >}}
+Loads `regi` with the word of memory pointed to by `iy` plus `ofs8`.
+* Opcode: `11111101` `regi` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `00110111` |
+    | `iy`  | `00110001` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F + 3R
+{{< /expand >}}
+
+{{< expand "ld (ix + ofs8), regi" "..." >}}
+Loads the word of memory at `ix` plus `ofs8` with `regi`.
+* Opcode: `11011101` `regi` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `00111111` |
+    | `iy`  | `00111110` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F + 3W
+{{< /expand >}}
+
+{{< expand "ld (iy + ofs8), regi" "..." >}}
+Loads the word of memory at `iy` plus `ofs8` with `regi`.
+* Opcode: `11111101` `regi` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `00111111` |
+    | `iy`  | `00111110` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F + 3W
+{{< /expand >}}
+
 ## LDD
 
 {{< expand "ldd" "..." >}}
@@ -498,6 +598,64 @@ Transfers the byte of memory pointed to by `hl` to the memory location pointed t
     * N: Reset
     * P/V: Reset
 * Cycles: 2F+(1R+1W+1)*bc
+{{< /expand >}}
+
+## LEA
+
+{{< expand "lea regi, ix + ofs8" "..." >}}
+Loads `regi` with the value of `ix` plus `ofs8`.
+* Opcode: `11101101` `regi` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `01010100` |
+    | `iy`  | `00110011` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F
+{{< /expand >}}
+
+{{< expand "lea regi, iy + ofs8" "..." >}}
+Loads `regi` with the value of `iy` plus `ofs8`.
+* Opcode: `11101101` `regi` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `00110010` |
+    | `iy`  | `01010101` |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F
+{{< /expand >}}
+
+{{< expand "lea reg24, regi + ofs8" "..." >}}
+Loads `reg24` with the value of `regi` + `ofs8`.
+* Opcode: `regi` `00` `reg24` `001` `regi` `ofs8`
+    | Index | Bit Field       |
+    |-------|-----------------|
+    | `ix`  | `11011101`, `0` |
+    | `iy`  | `11111101`, `1` |
+
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F
+{{< /expand >}}
+
+## PEA
+
+{{< expand "pea regi + ofs8" "..." >}}
+The value of `regi` plus `ofs8` is pushed to the stack.
+* Opcode: `11101101` `011001` `regi` `ofs8`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `01`       |
+    | `iy`  | `10`       |
+* Bytes: 3
+* Flags: None
+* Cycles: 3F + 3W
 {{< /expand >}}
 
 ## POP
