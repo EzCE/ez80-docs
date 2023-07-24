@@ -482,6 +482,19 @@ Loads the word of memory pointed to by `regi` + `ofs8` into `reg24`.
 * Cycles: 3F + 3R
 {{< /expand >}}
 
+{{< expand "ld reg24, (hl)" "..." >}}
+Loads `reg24` with the word of memory pointed to by `hl`.
+* Opcode: `11101101` `00` `reg24` `0111`
+    | Register | Bit Field |
+    |----------|-----------|
+    | `bc`     | `00`      |
+    | `de`     | `01`      |
+    | `hl`     | `10`      |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F + 3R
+{{< /expand >}}
+
 {{< expand "ld (regi + ofs8), reg24" "..." >}}
 Stores `reg24` into the word of memory pointed to by `regi` + `ofs8`.
 * Opcode: `regi` `00` `reg24` `1111` `ofs8`
@@ -522,6 +535,18 @@ Loads `regi` with the word of memory pointed to by `iy` plus `ofs8`.
 * Bytes: 3
 * Flags: None
 * Cycles: 3F + 3R
+{{< /expand >}}
+
+{{< expand "ld regi, (hl)" "..." >}}
+Loads `regi` with the word of memory pointed to by `hl`.
+* Opcode: `11101101` `regi`
+    | Index | Bit Field  |
+    |-------|------------|
+    | `ix`  | `00110111` |
+    | `iy`  | `00110001` |
+* Bytes: 2
+* Flags: None
+* Cycles: 2F + 3R
 {{< /expand >}}
 
 {{< expand "ld (ix + ofs8), regi" "..." >}}
