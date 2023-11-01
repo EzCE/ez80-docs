@@ -33,7 +33,7 @@ This flag checks both parity and overflow (as the name implies). A signed overfl
 
 ## N (Add / Subtract)
 
-This flag is reset if the last instruction used was an addition instruction, and set if the last instruction was a subtraction instruction. However, it is almost never used like `h`.
+This flag is reset if the last instruction used was an addition instruction, and set if the last instruction was a subtraction instruction. However, like `h`, it is almost never used.
 
 ## C (Carry)
 
