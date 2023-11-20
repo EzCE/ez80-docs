@@ -1,61 +1,9 @@
 ---
-title: Data Movement
+title: Load
 weight: -20
 ---
 
 {{< toc >}}
-
-## EX
-
-{{< expand "ex af, af'" "..." >}}
-Exchanges the contents of `af` and `af'`.
-* Opcode: `00001000`
-* Bytes: 1
-* Flags: None
-* Cycles: 1F
-{{< /expand >}}
-
-{{< expand "ex (sp), hl" "...">}}
-Exchanges the word of memory pointed to by `sp` with `hl`.
-* Opcode: `11100011`
-* Bytes: 1
-* Flags: None
-* Cycles: 1F+3R+3W
-{{< /expand >}}
-
-{{< expand "ex de, hl" "..." >}}
-Exchanges the contents of `de` and `hl`.
-* Opcode: `11101011`
-* Bytes: 1
-* Flags: None
-* Cycles: 1F
-{{< /expand >}}
-
-{{< expand "ex (sp), ix" "..." >}}
-Exchanges the word of memory pointed to by `sp` with `ix`.
-* Opcode: `11011101` `11100011`
-* Bytes: 2
-* Flags: None
-* Cycles: 2F+3R+3W
-{{< /expand >}}
-
-{{< expand "ex (sp), iy" "..." >}}
-Exchanges the word of memory pointed to by `sp` with `iy`.
-* Opcode: `11111101` `11100011`
-* Bytes: 2
-* Flags: None
-* Cycles: 2F+3R+3W
-{{< /expand >}}
-
-## EXX
-
-{{< expand "exx" "..." >}}
-Exchanges the contents of `af`, `bc`, `de`, and `hl` with `af'`, `bc'`, `de'`, and `hl'`, respectively.
-* Opcode: `11011001`
-* Bytes: 1
-* Flags: None
-* Cycles: 1F
-{{< /expand >}}
 
 ## LD
 
@@ -571,58 +519,6 @@ Loads the word of memory at `iy` plus `ofs8` with `regi`.
 * Bytes: 3
 * Flags: None
 * Cycles: 3F + 3W
-{{< /expand >}}
-
-## LDD
-
-{{< expand "ldd" "..." >}}
-Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl`, `de`, and `bc` are decremented.
-* Opcode: `11101101` `10101000`
-* Bytes: 2
-* Flags:
-    * H: Reset
-    * N: Reset
-    * P/V: Reset if `bc` becomes zero
-* Cycles: 2F+1R+1W+1
-{{< /expand >}}
-
-## LDDR
-
-{{< expand "lddr" "..." >}}
-Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl`, `de`, and `bc` are decremented. If `bc` is not zero, this operation is repeated. Interrupts can trigger between repetitions.
-* Opcode: `11101101` `10111000`
-* Bytes: 2
-* Flags:
-    * H: Reset
-    * N: Reset
-    * P/V: Reset
-* Cycles: 2F+(1R+1W+1)*bc
-{{< /expand >}}
-
-## LDI
-
-{{< expand "ldi" "..." >}}
-Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl` and `de` are incremented and `bc` is decremented.
-* Opcode: `11101101` `10100000`
-* Bytes: 2
-* Flags:
-    * H: Reset
-    * N: Reset
-    * P/V: Reset if `bc` becomes zero
-* Cycles: 2F+1R+1W+1
-{{< /expand >}}
-
-## LDIR
-
-{{< expand "ldir" "..." >}}
-Transfers the byte of memory pointed to by `hl` to the memory location pointed to by `de`. Then `hl` and `de` are incremented and `bc` is decremented. If `bc` is not zero, this operation is repeated. Interrupts can trigger between repetitions.
-* Opcode: `11101101` `10110000`
-* Bytes: 2
-* Flags:
-    * H: Reset
-    * N: Reset
-    * P/V: Reset
-* Cycles: 2F+(1R+1W+1)*bc
 {{< /expand >}}
 
 ## LEA
