@@ -41,7 +41,7 @@ This makes so that equates and calls from the include files are recognized in yo
 format ti archived executable protected program 'HELLO'
 ```
 
-This tells the compiler how to format the compiled program. You'll usually want to keep most of this the same, though you can change the name by replacing 'HELLO' with something else ('WORLD') for example if you'd like.
+This tells the assembler how to format the assembled program. You'll usually want to keep most of this the same, though you can change the name by replacing 'HELLO' with something else ('WORLD') for example if you'd like.
 
 Now for the code:
 
@@ -77,9 +77,9 @@ text:
     db "Hello, world!", 0   ; Store this string in memory for whatever we want
 ```
 
-## Compiling
+## Assembling
 
-Now let's compile it. The basic syntax for the fasmg compiler is `fasmg <source file> <output file>`. Open a terminal in the main folder of your project and run this command:
+Now let's assemble it. The basic syntax for the fasmg assembler is `fasmg <source file> <output file>`. Open a terminal in the main folder of your project and run this command:
 
 ```Plain
 fasmg src/main.asm HELLO.8xp

@@ -7,9 +7,9 @@ This page will walk you through the basics of setting up an environment for writ
 
 {{< toc >}}
 
-## Installing a compiler
+## Installing an assembler
 
-To start writing and compiling programs, you'll need to have a way to compile them. If you've already installed and set up the [CE C Toolchain](https://ce-programming.github.io/toolchain/index.html), then you also already have a way to compile ez80 assembly. In that case, you're already ready for the [next step](#installing-cemu)! Otherwise, follow the instructions below.
+To start writing and assembling programs, you'll need to have a way to assemble them. If you've already installed and set up the [CE C Toolchain](https://ce-programming.github.io/toolchain/index.html), then you also already have a way to assemble ez80 assembly. In that case, you're already ready for the [next step](#installing-cemu)! Otherwise, follow the instructions below.
 
 1. Download the latest version of the flat assembler g (fasmg) from its website [here](https://flatassembler.net/download.php). It will probably be at the very bottom of the page.
 2. Extract the downloaded zip and find the version for your OS. If you're confused, this handy chart will help you pick the one that's right for you:
