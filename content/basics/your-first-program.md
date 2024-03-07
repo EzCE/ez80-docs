@@ -95,4 +95,4 @@ flat assembler  version g.jmhx
 If not, look back over your code and make sure it matches with the example. If so, try sending it to CEmu and testing it out! You can do this by opening CEmu and dragging the file onto the calculator.
 
 ## What Next?
-Now that you've made your first assembly program, it's time to create your own. For starters, you can try messing around with the source code of this example! Try displaying a different message, or naming the program something different! Once you're ready, you can use the information on instructions and system calls to make your own programs.
+Now that you've made your first assembly program, it's time to create your own. For starters, you can try messing around with the source code of this example! Try displaying a different message, or naming the program something different! Once you're ready, you can use the information on instructions and system calls (WIP) to make your own programs.
