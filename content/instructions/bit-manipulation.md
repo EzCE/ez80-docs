@@ -1,6 +1,6 @@
 ---
 title: Bit Manipulation
-weight: -20
+weight: -10
 ---
 
 {{< toc >}}

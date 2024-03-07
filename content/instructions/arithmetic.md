@@ -1,6 +1,6 @@
 ---
 title: Arithmetic
-weight: -20
+weight: -10
 ---
 
 {{< toc >}}

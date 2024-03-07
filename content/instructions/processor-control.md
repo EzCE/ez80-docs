@@ -1,6 +1,6 @@
 ---
 title: Processor Control
-weight: -20
+weight: -10
 ---
 
 {{< toc >}}

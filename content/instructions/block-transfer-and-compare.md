@@ -1,6 +1,6 @@
 ---
 title: Block Transfer and Compare
-weight: -20
+weight: -10
 ---
 
 {{< toc >}}
