@@ -9,7 +9,7 @@ This page will walk you through the basics of setting up an environment for writ
 
 ## Installing an assembler
 
-To start writing and assembling programs, you'll need to have a way to assemble them. If you've already installed and set up the [CE C Toolchain](https://ce-programming.github.io/toolchain/index.html), then you also already have a way to assemble ez80 assembly. In that case, you're already ready for the [next step](#installing-cemu)! Otherwise, follow the instructions below.
+To start writing and assembling programs, you'll need to have a way to assemble them. If you've already installed and set up the [CE C Toolchain](https://ce-programming.github.io/toolchain/index.html), then you also already have a way to assemble eZ80 assembly. In that case, you're already ready for the [next step](#installing-cemu)! Otherwise, follow the instructions below.
 
 1. Download the latest version of the flat assembler g (fasmg) from its website [here](https://flatassembler.net/download.php). It will probably be at the very bottom of the page.
 2. Extract the downloaded zip and find the version for your OS. If you're confused, this handy chart will help you pick the one that's right for you:
@@ -26,10 +26,10 @@ To start writing and assembling programs, you'll need to have a way to assemble 
 
 {{< tabs "installfasmg" >}}
 {{< tab "Windows" >}}
-1. Move `fasmg.exe` to a location with no spaces in the the file path. For example, `C:\ez80-fasmg`.
+1. Move `fasmg.exe` to a location with no spaces in the the file path. For example, `C:\eZ80-fasmg`.
 2. Add the directory containing fasmg to your PATH environment variable. To do this, first open the start menu and search for "Edit the system environment variables"
 3. Click the "Environment Variables" button and find "PATH" in the lower (System Variables) section.
-4. Click on "Edit" and then click "New". You should see a text box, where you should add the path to the directory containing fasmg. In our example, this is `C:\ez80-fasmg`.
+4. Click on "Edit" and then click "New". You should see a text box, where you should add the path to the directory containing fasmg. In our example, this is `C:\eZ80-fasmg`.
 5. Once you are done, exit the windows by pressing "OK", "OK", and "OK".
 6. To confirm that this was done correctly, open a command prompt and type and run `fasmg`. You should see an output like this:
 ```Plain
@@ -47,9 +47,9 @@ Optional settings:
 {{< /tab >}}
 
 {{< tab "Linux" >}}
-1. Move either `fasmg` or `fasmg.x64` to a file path without any spaces. For example, `/home/user/ez80-fasmg`.
+1. Move either `fasmg` or `fasmg.x64` to a file path without any spaces. For example, `/home/user/eZ80-fasmg`.
 2. Add the directory containing fasmg to your PATH environment variable. To do this first open a terminal.
-3. In the terminal, we need to edit our rc file. In this example, we'll be assuming it is a bashrc, as this is one of the most common. To do this, run the following command, where `<path to fasmg>` is the path to the directory containing it. (In our example, `/home/user/ez80-fasmg`):
+3. In the terminal, we need to edit our rc file. In this example, we'll be assuming it is a bashrc, as this is one of the most common. To do this, run the following command, where `<path to fasmg>` is the path to the directory containing it. (In our example, `/home/user/eZ80-fasmg`):
 ```Plain
 echo "export PATH=/<path to fasmg>:$PATH" >> .bashrc
 ```
@@ -69,9 +69,9 @@ Optional settings:
 {{< /tab >}}
 
 {{< tab "macOS" >}}
-1. Move `source/macos/fasmg` or `source/macos/x64/fasmg` to a file path without any spaces. For example, `/Users/<user>/ez80-fasmg`.
+1. Move `source/macos/fasmg` or `source/macos/x64/fasmg` to a file path without any spaces. For example, `/Users/<user>/eZ80-fasmg`.
 2. Add the directory containing fasmg to your PATH environment variable. To do this first open a terminal.
-3. In the terminal, we need to edit our rc file. In this example, we'll be assuming it is a zshrc, as this is the default on macOS. To do this, run the following command, where `<path to fasmg>` is the path to the directory containing it. (In our example, `/Users/<user>/ez80-fasmg`):
+3. In the terminal, we need to edit our rc file. In this example, we'll be assuming it is a zshrc, as this is the default on macOS. To do this, run the following command, where `<path to fasmg>` is the path to the directory containing it. (In our example, `/Users/<user>/eZ80-fasmg`):
 ```Plain
 echo "export PATH=$PATH:/<path to fasmg>" >> .zshrc
 ```

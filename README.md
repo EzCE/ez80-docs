@@ -1,8 +1,8 @@
-# ez80 docs
+# eZ80 docs
 
 ## About
 
-This documentation seeks to make assembly programming easier for the TI-84+ CE calculator. It aims to provide information on hardware, system calls, instructions, and more. Whether you've never touched ez80 assembly before or you're a long-time expert, this is the place for you!
+This documentation seeks to make assembly programming easier for the TI-84+ CE calculator. It aims to provide information on hardware, system calls, instructions, and more. Whether you've never touched eZ80 assembly before or you're a long-time expert, this is the place for you!
 
 ## Contributing
 

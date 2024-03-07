@@ -7,19 +7,63 @@ weight: -10
 
 ## CPD
 
-
+{{< expand "cpd" "..." >}}
+Compares (via subtraction) the value in `a` with the 8-bit value pointed to by `hl`. Then, both `hl` and `bc` are decremented by one.
+* Opcode: `11101101` `10101001`
+* Bytes: 2
+* Flags:
+    * S: Affected as [defined](../flags/#s-sign)
+    * Z: Set if the value in `a` is equal to the 8-bit value pointed to by `hl`, reset otherwise
+    * H: Affected as [defined](../flags/#h-half-carry)
+    * P/V: Set while `bc` is not 0, otherwise reset if `bc` is decremented to 0
+    * N: Set
+* Cycles: 2F + 1R
+{{< /expand >}}
 
 ## CPDR
 
-
+{{< expand "cpdr" "..." >}}
+Compares (via subtraction) the value in `a` with the 8-bit value pointed to by `hl`. Then, both `hl` and `bc` are decremented by one. This operation is then repeated until either `a` is equal to the 8-bit value pointed to by `hl`, or the P/V flag is reset (bc is decremented to 0).
+* Opcode: `11101101` `10111001`
+* Bytes: 2
+* Flags:
+    * S: Affected as [defined](../flags/#s-sign)
+    * Z: Set if the value in `a` is equal to the 8-bit value pointed to by `hl`, reset otherwise
+    * H: Affected as [defined](../flags/#h-half-carry)
+    * P/V: Set while `bc` is not 0, otherwise reset if `bc` is decremented to 0
+    * N: Set
+* Cycles: 2F + (1R + 2 ) * bc - 1
+{{< /expand >}}
 
 ## CPI
 
-
+{{< expand "cpi" "..." >}}
+Compares (via subtraction) the value in `a` with the 8-bit value pointed to by `hl`. Then, `hl` is incremented and `bc` is decremented by one.
+* Opcode: `11101101` `10100001`
+* Bytes: 2
+* Flags:
+    * S: Affected as [defined](../flags/#s-sign)
+    * Z: Set if the value in `a` is equal to the 8-bit value pointed to by `hl`, reset otherwise
+    * H: Affected as [defined](../flags/#h-half-carry)
+    * P/V: Set while `bc` is not 0, otherwise reset if `bc` is decremented to 0
+    * N: Set
+* Cycles: 2F + 1R
+{{< /expand >}}
 
 ## CPIR
 
-
+{{< expand "cpdr" "..." >}}
+Compares (via subtraction) the value in `a` with the 8-bit value pointed to by `hl`. Then, `hl` is incremented and `bc` is decremented by one. This operation is then repeated until either `a` is equal to the 8-bit value pointed to by `hl`, or the P/V flag is reset (bc is decremented to 0).
+* Opcode: `11101101` `10110001`
+* Bytes: 2
+* Flags:
+    * S: Affected as [defined](../flags/#s-sign)
+    * Z: Set if the value in `a` is equal to the 8-bit value pointed to by `hl`, reset otherwise
+    * H: Affected as [defined](../flags/#h-half-carry)
+    * P/V: Set while `bc` is not 0, otherwise reset if `bc` is decremented to 0
+    * N: Set
+* Cycles: 2F + (1R + 2 ) * bc - 1
+{{< /expand >}}
 
 ## LDD
 
@@ -29,9 +73,9 @@ Transfers the byte of memory pointed to by `hl` to the memory location pointed t
 * Bytes: 2
 * Flags:
     * H: Reset
-    * N: Reset
     * P/V: Reset if `bc` becomes zero
-* Cycles: 2F+1R+1W+1
+    * N: Reset
+* Cycles: 2F + 1R + 1W + 1
 {{< /expand >}}
 
 ## LDDR
@@ -42,9 +86,9 @@ Transfers the byte of memory pointed to by `hl` to the memory location pointed t
 * Bytes: 2
 * Flags:
     * H: Reset
-    * N: Reset
     * P/V: Reset
-* Cycles: 2F+(1R+1W+1)*bc
+    * N: Reset
+* Cycles: 2F + (1R + 1W + 1) * bc
 {{< /expand >}}
 
 ## LDI
@@ -55,8 +99,8 @@ Transfers the byte of memory pointed to by `hl` to the memory location pointed t
 * Bytes: 2
 * Flags:
     * H: Reset
-    * N: Reset
     * P/V: Reset if `bc` becomes zero
+    * N: Reset
 * Cycles: 2F+1R+1W+1
 {{< /expand >}}
 
@@ -68,7 +112,7 @@ Transfers the byte of memory pointed to by `hl` to the memory location pointed t
 * Bytes: 2
 * Flags:
     * H: Reset
-    * N: Reset
     * P/V: Reset
-* Cycles: 2F+(1R+1W+1)*bc
+    * N: Reset
+* Cycles: 2F + (1R + 1W + 1) * bc
 {{< /expand >}}

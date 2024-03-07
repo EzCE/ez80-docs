@@ -1,11 +1,11 @@
 ---
-title: Welcome to ez80 docs!
+title: Welcome to eZ80 docs!
 geekdocNav: false
 geekdocAlign: center
 geekdocAnchor: false
 ---
 
-This documentation seeks to make assembly programming easier for the TI-84+ CE calculator. It aims to provide information on hardware, system calls, instructions, and more. Whether you've never touched ez80 assembly before or you're a long-time expert, this is the place for you!
+This documentation seeks to make assembly programming easier for the TI-84+ CE calculator. It aims to provide information on hardware, system calls, instructions, and more. Whether you've never touched eZ80 assembly before or you're a long-time expert, this is the place for you!
 
 {{< button relref="basics/getting-started/" class="..." size="large" >}}Getting Started{{< /button >}}
 
@@ -26,6 +26,6 @@ Complete information that doesn't leave you questioning the consequences of an i
 Made by the community, for the community! If there's something you know that's not here yet, it's easy for you to add it yourself!
 {{< /columns >}}
 
-{{< hint type=important >}}
+{{< hint type=important icon="construction" title="Under Construction" >}}
 This documentation is still in a very early state. If you want to help, you can contribute [here](https://github.com/EzCE/ez80-docs)!
 {{< /hint >}}
