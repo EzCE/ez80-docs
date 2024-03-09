@@ -314,7 +314,33 @@ Compares (via subtraction) the value pointed to by `regi` + `ofs8` with the valu
 
 ## DAA
 
-
+{{< expand "daa" "..." >}}
+This instruction is meant to be used after an addition or subtraction instruction on binary-coded-decimal values, specifically [`add`](#add), [`adc`](#adc), [`inc`](#inc), [`sub`](#sub), [`sbc`](#sbc), [`dec`](#dec), or [`neg`](#neg). Following one of these specific instructions, `daa` adjusts the value in `a` according to this table:
+| Operation             | C flag prior to DAA | H flag prior to DAA | Upper digit of `a` | Lower digit of `a` | Number added to `a` | C flag after DAA | H flag after DAA |
+|-----------------------|---------------------|---------------------|--------------------|--------------------|---------------------|------------------|------------------|
+| ADD, ADC, or INC      | 0                   | 0                   | 0 - 9              | 0 - 9              | 00                  | 0                | 0                |
+|                       | 0                   | 0                   | 0 - 8              | A - F              | 06                  | 0                | 1                |
+|                       | 0                   | 1                   | 0 - 9              | 0 - 3              | 06                  | 0                | 0                |
+|                       | 0                   | 0                   | A - F              | 0 - 9              | 60                  | 1                | 0                |
+|                       | 0                   | 0                   | 9 - F              | A - F              | 66                  | 1                | 1                |
+|                       | 0                   | 1                   | A - F              | 0 - 3              | 66                  | 1                | 0                |
+|                       | 1                   | 0                   | 0 - 2              | 0 - 9              | 60                  | 1                | 0                |
+|                       | 1                   | 0                   | 0 - 2              | A - F              | 66                  | 1                | 1                |
+|                       | 1                   | 1                   | 0 - 3              | 0 - 3              | 66                  | 1                | 0                |
+| SUB, SBC, DEC, or NEG | 0                   | 0                   | 0 - 9              | 0 - 9              | 00                  | 0                | 0                |
+|                       | 0                   | 1                   | 0 - 8              | 6 - F              | FA                  | 0                | 0                |
+|                       | 1                   | 0                   | 7 - F              | 0 - 9              | A0                  | 1                | 0                |
+|                       | 1                   | 1                   | 6 - F              | 6 - F              | 9A                  | 1                | 0                |
+* Opcode: `00100111`
+* Bytes: 1
+* Flags:
+    * S: Set if msb of the result is 1, reset otherwise
+    * Z: Set if result is 0, reset otherwise
+    * H: See above table
+    * P/V: Detects parity
+    * C: See above table
+* Cycles: 1F
+{{< /expand >}}
 
 ## DEC
 

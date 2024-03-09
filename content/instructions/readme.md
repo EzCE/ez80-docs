@@ -5,7 +5,7 @@
 The format for instructions is as follows:
 
 ```Markdown
-# Parent Instruction
+## Parent Instruction
 
 {{< expand "variant 1" "..." >}}
 Brief overview of what the variant does
@@ -28,4 +28,4 @@ Registers can be named, or a wildcard can be used instead depending on the conte
 
 For easier understanding, a letter is used to note the wildcard register's purpose. For example, `reg8D` refers to the destination, while `reg8S` refers to the source.
 
-For more information, see the [notation section](https://ezce.github.io/ez80-docs/instructions/notation/).
+For more information, see the [notation section](https://ezce.github.io/ez80-docs/instructions/notation/). It is also recommended to take a look at some the already existing documentation to get a feel for how things should be formatted.

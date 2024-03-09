@@ -10,6 +10,7 @@ The instruction documentation includes shorthand abbreviation for frequently use
 | Notation      | Definition                                                                                                                                                                   |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | (imm24)       | The value pointed to by a 24-bit address. The size of the value depends on the instruction.                                                                                  |
+| (imm8)        | The value pointed to by a 8-bit address. The size of the value depends on the instruction.                                                                                   |
 | (reg24)       | The value pointed to by the address in a 24-bit register. The size of the value depends on the instruction.                                                                  |
 | (regi + ofs8) | The value pointed to by an address formed by the sum of the 24-bit value of an index register plus an 8-bit signed offset. The size of the value depends on the instruction. |
 | cc            | Condition code C, NC, Z, NZ, P, M, PO, or PE - tests of single bits in Flags register.                                                                                       |
