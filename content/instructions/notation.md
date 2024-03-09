@@ -24,5 +24,5 @@ The instruction documentation includes shorthand abbreviation for frequently use
 | reg16         | 16-bit register pair.                                                                                                                                                        |
 | reg8          | 8-bit register.                                                                                                                                                              |
 | reg8i         | 8-bit high or low byte of an index register.                                                                                                                                 |
-| regi          | Index register pair `ix` or `iy`                                                                                                                                             |
+| regi          | Index register pair `ix` or `iy`.                                                                                                                                            |
 | regir         | Interrupt vector register `i` or refresh counter regiser `r`.                                                                                                                |
