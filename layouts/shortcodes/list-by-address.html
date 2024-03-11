@@ -1,0 +1,3 @@
+{{ range (site.GetPage (.Get 0)).Pages.ByParam "params.address" }}
+* [{{ .Params.params.address }} - {{ .LinkTitle }}]({{ .RelPermalink }})
+{{ end }}

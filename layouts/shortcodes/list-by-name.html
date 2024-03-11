@@ -1,0 +1,8 @@
+{{ $lastletter := "nil" }}
+{{ range (site.GetPage (.Get 0)).Pages.ByParam "params.name" }}
+    {{ if ne $lastletter (strings.FirstUpper (substr .Params.params.name 0 1)) }}
+## {{ strings.FirstUpper (substr .Params.params.name 0 1) }}
+        {{ $lastletter = (strings.FirstUpper (substr .Params.params.name 0 1)) }}
+    {{ end }}
+ * [{{ .LinkTitle }}]({{ .RelPermalink }})
+{{ end }}

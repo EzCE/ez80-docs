@@ -1,7 +1,7 @@
 {{ $img := "" }}
 
 {{ with $source := ($.Resources.ByType "image").GetMatch "{*feature*,*cover*,*thumbnail*}" }}
-  {{ $featured := .Fill (printf "1200x630 %s" (default "Smart" .Params.anchor)) }}
+  {{ $featured := .Fill (printf "120$630 %s" (default "Smart" .Params.anchor)) }}
   {{ $img = $featured.Permalink }}
 {{ else }}
   {{ with default $.Site.Params.images $.Params.images }}

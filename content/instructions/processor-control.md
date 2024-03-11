@@ -58,7 +58,7 @@ Sets the interrupt mode to either 0, 1, or 2. The different modes are described 
 | Mode | Behavior                                                                                                                                                                                                                                                                                                   |
 |------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0    | The interrupting device inserts an instruction on the data bus during an interrupt acknowledge cycle.                                                                                                                                                                                                      |
-| 1    | The CPU responds to an interrupt by executing a restart to location 0x000038.                                                                                                                                                                                                                              |
+| 1    | The CPU responds to an interrupt by executing a restart to location $000038.                                                                                                                                                                                                                              |
 | 2    | The interrupting device places the low-order address of the interrupt vector on the data bus during an interrupt acknowledge cycle. The `i` register provides the high-order byte of the interrupt vector table address. The 16-bit value formed is the starting address of the interrupt service routine. |
 * Opcode: `11101101` `010` `mode` `110`
     | Mode | Bit Field |
@@ -313,21 +313,21 @@ Used at the end of a nonmaskable interrupt service routine to return to the poin
 ## RST
 
 {{< expand "rst imm8" "..." >}}
-This instruction functions similar to the [`call`](#call) instruction. However `imm8` is limited to 8 specific values: 0x00, 0x08, 0x10, 0x18, 0x20, 0x28, 0x30, and 0x38. The address of the instruction following the current `rst` instruction is pushed to the stack, and then `pc` is loaded with `imm8`.
+This instruction functions similar to the [`call`](#call) instruction. However `imm8` is limited to 8 specific values: $00, $08, $10, $18, $20, $28, $30, and $38. The address of the instruction following the current `rst` instruction is pushed to the stack, and then `pc` is loaded with `imm8`.
 {{< hint type=warning >}}
 Using this instruction on the CE will most likely cause a crash to occur, regardless of the restart address.
 {{< /hint >}}
 * Opcode: `11` `imm8` `111`
     | Restart Address | Bit Field |
     |-----------------|-----------|
-    | 0x00            | 000       |
-    | 0x08            | 001       |
-    | 0x10            | 010       |
-    | 0x18            | 011       |
-    | 0x20            | 100       |
-    | 0x28            | 101       |
-    | 0x30            | 110       |
-    | 0x38            | 111       |
+    | $00             | 000       |
+    | $08             | 001       |
+    | $10             | 010       |
+    | $18             | 011       |
+    | $20             | 100       |
+    | $28             | 101       |
+    | $30             | 110       |
+    | $38             | 111       |
 * Bytes: 1
 * Flags:
     * None

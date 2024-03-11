@@ -1,0 +1,8 @@
+{{ $lastcategory := "nil" }}
+{{ range (site.GetPage (.Get 0)).Pages.ByParam "params.category" }}
+    {{ if ne $lastcategory (strings.FirstUpper .Params.params.category) }}
+## {{ (strings.FirstUpper .Params.params.category) }}
+        {{ $lastcategory = (strings.FirstUpper .Params.params.category) }}
+    {{ end }}
+* [{{ .LinkTitle }}]({{ .RelPermalink }})
+{{ end }}

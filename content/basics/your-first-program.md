@@ -13,8 +13,6 @@ One of the most important things when making a project is sticking to a consiste
 ```Plain
 project                         // The main folder for your project
 ├── include                     // A folder containing the include files
-│   ├── commands.alm
-│   ├── ez80.alm
 │   ├── ez80.inc
 │   ├── ti84pceg.inc
 │   ├── tiformat.inc
