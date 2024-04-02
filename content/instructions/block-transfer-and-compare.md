@@ -50,9 +50,9 @@ Compares (via subtraction) the value in `a` with the 8-bit value pointed to by `
 * Cycles: 2F + 1R
 {{< /expand >}}
 
-## CPDR
+## CPIR
 
-{{< expand "cpdr" "..." >}}
+{{< expand "cpir" "..." >}}
 Compares (via subtraction) the value in `a` with the 8-bit value pointed to by `hl`. Then, `hl` is incremented and `bc` is decremented by one. This operation is then repeated until either `a` is equal to the 8-bit value pointed to by `hl`, or the P/V flag is reset (bc is decremented to 0).
 * Opcode: `11101101` `10110001`
 * Bytes: 2

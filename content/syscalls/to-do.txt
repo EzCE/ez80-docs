@@ -15,24 +15,13 @@ Various Parts Contributed by
 --------------------------------
                           := 0020124h
                           := 0020128h
-GetCSC                    := 002014Ch
-CoorMon                   := 0020150h
-Mon                       := 0020154h
-MonForceKey               := 0020158h
 SendKPress                := 002015Ch
 JForceCmdNoChar           := 0020160h
 JForceCmd                 := 0020164h
 SysErrHandler             := 0020168h
 NewContext                := 002016Ch
 NewContext0               := 0020170h
-PPutawayPrompt            := 0020174h
-PPutAway                  := 0020178h
-PutAway                   := 002017Ch
-SizeWind                  := 0020180h
-ErrorEP                   := 0020184h
-CallMain                  := 0020188h
 MonErrHand                := 002018Ch
-AppInit                   := 0020190h
 Initialize                := 0020194h
 Min                       := 0020198h
 Max                       := 002019Ch

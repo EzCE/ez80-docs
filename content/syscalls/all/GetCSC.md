@@ -1,13 +1,13 @@
 ---
-title: KbdScan
+title: GetCSC
 geekdocHidden: true
 params:
-    address: $020148
+    address: $02014C
     category: Keyboard
-    name: KbdScan
+    name: GetCSC
 ---
 
-Scans the keyboard for any key presses and updates the value at [`kbdScanCode`](../../../memory/all/kbdScanCode) accordingly. A list of possible scan codes is below:
+This routine loads the current keyboard scancode from [`kbdScanCode`](../../../memory/all/kbdScanCode) into `a`, then clears [`kbdScanCode`](../../../memory/all/kbdScanCode). If no key is pressed, `a` is $00. Note that using it will also enable interrupts. A list of possible scan codes is below:
 
 {{< expand "Scan Codes" "..." >}}
 | Scan Code  | Scan Code (Hex) |
@@ -63,13 +63,16 @@ Scans the keyboard for any key presses and updates the value at [`kbdScanCode`](
 | skDel      | $38             |
 {{< /expand >}}
 
-### Address: $020148
+### Address: $02014C
 
 ### Inputs:
 * None.
 
 ### Outputs:
-* Value at [`kbdScanCode`](../../../memory/all/kbdScanCode) contains scan code.
+* `a`: Current scancode.
+* `hl`: [`kbdScanCode`](../../../memory/all/kbdScanCode) address.
+* [`kbdScanCode`](../../../memory/all/kbdScanCode): Loaded with $00.
+* `kbdSCR` flag reset.
 
 ### Destroys:
-* `hl`, `bc`, `a`
+* `a`, `hl`
