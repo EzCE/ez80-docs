@@ -119,10 +119,7 @@ Adds the value in `reg24` to the value in `hl`.
     | `sp`     | `11`      |
 * Bytes: 1
 * Flags:
-    * S: Affected as [defined](../flags/#s-sign)
-    * Z: Affected as [defined](../flags/#z-zero)
-    * H: Affected as [defined](../flags/#h-half-carry)
-    * P/V: Detects overflow
+    * H: Set if carry from bit 11, reset otherwise
     * N: Reset
     * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 1F
@@ -181,10 +178,7 @@ Adds the value in `reg24` to the value in `regi`.
     | `ix`/`iy` | `10`      |
 * Bytes: 2
 * Flags:
-    * S: Affected as [defined](../flags/#s-sign)
-    * Z: Affected as [defined](../flags/#z-zero)
-    * H: Affected as [defined](../flags/#h-half-carry)
-    * P/V: Detects overflow
+    * H: Set if carry from bit 11, reset otherwise
     * N: Reset
     * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 2F
