@@ -1,0 +1,335 @@
+<style>
+.main-layout {
+    max-width: 22rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.button-horiz {
+    border-style: hidden;
+    border-radius: .3rem;
+    font-size: 1rem;
+    width: 4rem;
+    height: 2rem;
+}
+
+.button-horiz:hover {opacity: 75%;}
+
+.button-horiz:active {
+    opacity: 100%;
+    transform: translateY(2px);
+}
+
+.button-vert {
+    margin-top: .5rem;
+    border-style: hidden;
+    border-radius: .3rem;
+    font-size: .75rem;
+    width: 1.5rem;
+    height: 4rem;
+}
+
+.button-vert:hover {opacity: 75%;}
+
+.button-vert:active {
+    opacity: 100%;
+    transform: translateY(.25rem);
+}
+
+.function-keys-layout {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.keys1-layout {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto;
+}
+
+.arrows-layout {
+    grid-column: 4 / span 2;
+    grid-row: 2 / span 2;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto;
+}
+
+.keys2-layout {
+    grid-column: 1 / span 5;
+    grid-row: 4 / span 7;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.button-black {
+    background-color: #1D1D1D;
+    color: #EEEEEE;
+}
+
+.button-white {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ADADAD;
+    background-color: #EEEEEE;
+    color: #1D1D1D;
+}
+
+.output-layout {
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: auto auto;
+}
+
+.variable {
+    color: #1D1D1D;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DDDDDD;
+    border-radius: .25rem;
+    font-size: .875rem;
+    line-height: 1rem;
+    padding: .25rem .5rem;
+}
+</style>
+
+<div class="main-layout">
+    <div class="function-keys-layout">
+        <div><button onclick="getAttributes(46)" class="button-horiz button-white">y=</button></div>
+        <div><button onclick="getAttributes(45)" class="button-horiz button-white">window</button></div>
+        <div><button onclick="getAttributes(44)" class="button-horiz button-white">zoom</button></div>
+        <div><button onclick="getAttributes(43)" class="button-horiz button-white">trace</button></div>
+        <div><button onclick="getAttributes(42)" class="button-horiz button-white">graph</button></div>
+    </div>
+    <div class="keys1-layout">
+        <div><button onclick="getAttributes(47)" class="button-horiz" style="background-color: #93C3F3;">2nd</button></div>
+        <div><button onclick="getAttributes(48)" class="button-horiz button-black">mode</button></div>
+        <div><button onclick="getAttributes(49)" class="button-horiz button-black">del</button></div>
+        <div><button onclick="getAttributes(41)" class="button-horiz" style="background-color: #A0CA1E">alpha</button></div>
+        <div><button onclick="getAttributes(33)" class="button-horiz button-black">X,T,θ,n</button></div>
+        <div><button onclick="getAttributes(25)" class="button-horiz button-black">stat</button></div>
+    </div>
+    <div class="arrows-layout">
+        <div onclick="getAttributes(1)" style="grid-column: 1; grid-row: 1 / span 2;"><button class="button-vert button-white">◀</button></div>
+        <div onclick="getAttributes(3)" style="grid-column: 2; grid-row: 1;"><button class="button-horiz button-white">▲</button></div>
+        <div onclick="getAttributes(0)" style="grid-column: 2; grid-row: 2;"><button class="button-horiz button-white">▼</button></div>
+        <div onclick="getAttributes(2)" style="grid-column: 3; grid-row: 1 / span 2;"><button class="button-vert button-white">▶</button></div>
+    </div>
+    <div class="keys2-layout">
+        <div><button onclick="getAttributes(40)" class="button-horiz button-black">math</button></div>
+        <div><button onclick="getAttributes(32)" class="button-horiz button-black">apps</button></div>
+        <div><button onclick="getAttributes(24)" class="button-horiz button-black">prgm</button></div>
+        <div><button onclick="getAttributes(17)" class="button-horiz button-black">vars</button></div>
+        <div><button onclick="getAttributes(10)" class="button-horiz button-black">clear</button></div>
+        <div><button onclick="getAttributes(39)" class="button-horiz button-black">x⁻¹</button></div>
+        <div><button onclick="getAttributes(31)" class="button-horiz button-black">sin</button></div>
+        <div><button onclick="getAttributes(23)" class="button-horiz button-black">cos</button></div>
+        <div><button onclick="getAttributes(16)" class="button-horiz button-black">tan</button></div>
+        <div><button onclick="getAttributes(9)" class="button-horiz button-black">^</button></div>
+        <div><button onclick="getAttributes(38)" class="button-horiz button-black">x²</button></div>
+        <div><button onclick="getAttributes(30)" class="button-horiz button-black">,</button></div>
+        <div><button onclick="getAttributes(22)" class="button-horiz button-black">(</button></div>
+        <div><button onclick="getAttributes(15)" class="button-horiz button-black">)</button></div>
+        <div><button onclick="getAttributes(8)" class="button-horiz button-white">÷</button></div>
+        <div><button onclick="getAttributes(37)" class="button-horiz button-black">log</button></div>
+        <div><button onclick="getAttributes(29)" class="button-horiz button-white">7</button></div>
+        <div><button onclick="getAttributes(21)" class="button-horiz button-white">8</button></div>
+        <div><button onclick="getAttributes(14)" class="button-horiz button-white">9</button></div>
+        <div><button onclick="getAttributes(7)" class="button-horiz button-white">×</button></div>
+        <div><button onclick="getAttributes(36)" class="button-horiz button-black">ln</button></div>
+        <div><button onclick="getAttributes(28)" class="button-horiz button-white">4</button></div>
+        <div><button onclick="getAttributes(20)" class="button-horiz button-white">5</button></div>
+        <div><button onclick="getAttributes(13)" class="button-horiz button-white">6</button></div>
+        <div><button onclick="getAttributes(6)" class="button-horiz button-white">-</button></div>
+        <div><button onclick="getAttributes(35)" class="button-horiz button-black">sto→</button></div>
+        <div><button onclick="getAttributes(27)" class="button-horiz button-white">1</button></div>
+        <div><button onclick="getAttributes(19)" class="button-horiz button-white">2</button></div>
+        <div><button onclick="getAttributes(12)" class="button-horiz button-white">3</button></div>
+        <div><button onclick="getAttributes(5)" class="button-horiz button-white">+</button></div>
+        <div><button onclick="getAttributes(34)" class="button-horiz button-black">on</button></div>
+        <div><button onclick="getAttributes(26)" class="button-horiz button-white">0</button></div>
+        <div><button onclick="getAttributes(18)" class="button-horiz button-white">.</button></div>
+        <div><button onclick="getAttributes(11)" class="button-horiz button-white">(-)</button></div>
+        <div><button onclick="getAttributes(4)" class="button-horiz button-white">enter</button></div>
+    </div>
+</div>
+
+## Info
+Blue boxes have the value in decimal, green has it in hex, and red is the name found in [ti84pceg.inc](https://raw.githubusercontent.com/EzCE/ez80-docs/main/assets/include/ti84pceg.inc).
+
+<div id="info-output">
+    No key selected.
+</div>
+
+<script>
+    function getAttributes(key) {
+        let keyAttributes = [
+            ["01", "04", undefined, "08", undefined,
+            "skDown", "kDown", undefined, "kAlphaDown", undefined],
+            ["02", "02", "0E", undefined, undefined,
+            "skLeft", "kLeft", "kBOL", undefined, undefined],
+            ["03", "01", "0F", undefined, undefined,
+            "skRight", "kRight", "kEOL", undefined, undefined],
+            ["04", "03", undefined, "07", undefined,
+            "skUp", "kUp", undefined, "kAlphaUp", undefined],
+            ["09", "05", "0D", "06", undefined,
+            "skEnter", "kEnter", "kLastEnt", "kAlphaEnter", undefined],
+            ["0A", "80", "36", "CB", undefined,
+            "skAdd", "kAdd", "kMem", "kQuote", undefined],
+            ["0B", "81", "88", "B0", "F8",
+            "skSub", "kSub", "kRBrack", "kCapW", "kLw"],
+            ["0C", "82", "87", "AB", "F3",
+            "skMul", "kMul", "kLBrack", "kCapR", "kLSmallr"],
+            ["0D", "83", "EF", "A6", "EE",
+            "skDiv", "kDiv", "kCONSTeA", "kCapM", "kLm"],
+            ["0E", "84", "B5", "A1", "E9",
+            "skPower", "kExpon", "kPi", "kCapH", "kLh"],
+            ["0F", "09", undefined, undefined, undefined,
+            "skClear", "kClear", undefined, undefined, undefined],
+            ["11", "8C", "C5", "CA", undefined,
+            "skChs", "kChs", "kAns", "kQuest", undefined],
+            ["12", "91", "F5", "CC", undefined,
+            "sk3", "k3", "kL3A", "kTheta", undefined],
+            ["13", "94", "F8", "AF", "F7",
+            "sk6", "k6", "kL6A", "kCapV", "kLv"],
+            ["14", "97", "FB", "AA", "F2",
+            "sk9", "k9", "kwnA", "kCapQ", "kLq"],
+            ["15", "86", "ED", "A5", "ED",
+            "skRParen", "kRParen", "kRBrace", "kCapL", "kLl"],
+            ["16", "BB", "BC", "A0", "E8",
+            "skTan", "kTan", "kATan", "kCapG", "kLg"],
+            ["17", "35", "38", undefined, undefined,
+            "skVars", "kVars", "kDist", undefined, undefined],
+            ["19", "8D", "EE", "C6", undefined,
+            "skDecPnt", "kDecPnt", "kI", "kColon", undefined],
+            ["1A", "90", "F4", "B3", "FB",
+            "sk2", "k2", "kL2A", "kCapZ", "kLz"],
+            ["1B", "93", "F7", "AE", "F6",
+            "sk5", "k5", "kL5A", "kCapU", "kLu"],
+            ["1C", "96", "FA", "A9", "F1",
+            "sk8", "k8", "kvnA", "kCapP", "kLp"],
+            ["1D", "85", "EC", "A4", "EC",
+            "skLParen", "kLParen", "kLBrace", "kCapK", "kLk"],
+            ["1E", "B9", "BA", "9F", "E7",
+            "skCos", "kCos", "kACos", "kCapF", "kLf"],
+            ["1F", "2D", "2F", "9C", "E4",
+            "skPrgm", "kPrgm", "kDraw", "kCapC", "kLc"],
+            ["20", "31", "3A", undefined, undefined,
+            "skStat", "kStat", "kList", undefined, undefined],
+            ["21", "8E", "3E", "99", undefined,
+            "sk0", "k0", "kCatalog", "kSpace", undefined],
+            ["22", "8F", "F3", "B2", "FA",
+            "sk1", "k1", "kL1A", "kCapY", "kLy"],
+            ["23", "92", "F6", "AD", "F5",
+            "sk4", "k4", "kL4A", "kCapT", "kLt"],
+            ["24", "95", "F9", "A8", "F0",
+            "sk7", "k7", "kUnA", "kCapO", "kLo"],
+            ["25", "8B", "98", "A3", "EB",
+            "skComma", "kComma", "kEE", "kCapJ", "kLj"],
+            ["26", "B7", "B8", "9E", "E6",
+            "skSin", "kSin", "kASin", "kCapE", "kLe"],
+            ["27", "2C", "39", "9B", "E3",
+            "skMatrix", "kAppsMenu", "kAngle", "kCapB", "kLb"],
+            ["28", "B4", "41", undefined, undefined,
+            "skGraphvar", "kVarX", "kLinkIO", undefined, undefined],
+            [undefined, undefined, undefined, undefined, undefined,
+            undefined, undefined, undefined, undefined, undefined],
+            ["2A", "8A", "0C", "B1", "F9",
+            "skStore", "kStore", "kRecall", "kCapX", "kLx"],
+            ["2B", "BF", "C0", "AC", "F4",
+            "skLn", "kLn", "kExp", "kCapS", "kLs"],
+            ["2C", "C1", "C2", "A7", "EF",
+            "skLog", "kLog", "kALog", "kCapN", "kLSmalln"],
+            ["2D", "BD", "BE", "A2", "EA",
+            "skSquare", "kSquare", "kSqrt", "kCapI", "kLi"],
+            ["2E", "86", "37", "9D", "E5",
+            "skRecip", "kInv", "kMatrix", "kCapD", "kLd"],
+            ["2F", "32", "33", "9A", "E2",
+            "skMath", "kMath", "kTest", "kCapA", "kLa"],
+            ["30", undefined, undefined, undefined, undefined,
+            "skAlpha", undefined, undefined, undefined, undefined],
+            ["31", "44", "4A", "3D", undefined,
+            "skGraph", "kGraph", "kTable", "None", undefined],
+            ["32", "5A", "3B", "3D", undefined,
+            "skTrace", "kTrace", "kCalc", "None", undefined],
+            ["33", "2E", "57", "3D", undefined,
+            "skZoom", "kZoom", "kFormat", "None", undefined],
+            ["34", "48", "4B", "3D", undefined,
+            "skWindow", "kWindow", "kTblSet", "None", undefined],
+            ["35", "49", "43", "3D", undefined,
+            "skYequ", "kYequ", "kStatEd", "None", undefined],
+            ["36", undefined, undefined, undefined, undefined,
+            "sk2nd", undefined, undefined, undefined, undefined],
+            ["37", "45", "40", undefined, undefined,
+            "skMode", "kMode", "kQuit", undefined, undefined],
+            ["38", "0A", "0B", undefined, undefined,
+            "skDel", "kDel", "kIns", undefined, undefined],
+        ];
+
+        // Everything but [on] should have a GetCSC code
+        if (keyAttributes[key][0] === undefined) {
+            document.getElementById("info-output").innerHTML = `No values.`;
+            return;
+        }
+
+        let output =
+        `<div class="output-layout" style="line-height: 2rem; font-size: 1rem; max-width: 30rem;">
+            GetCSC: 
+            <div style="grid-column: 2;">
+                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][0], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][0]}</span> 
+                <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][5]}</span>
+            </div>`;
+
+        if (keyAttributes[key][1] != undefined) {
+            output +=
+            `GetKey (default): 
+            <div style="grid-column: 2;">
+                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][1], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][1]}</span> 
+                <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][6]}</span>
+            </div>`;
+        }
+
+        if (keyAttributes[key][2] != undefined) {
+            output +=
+            `GetKey (2nd): 
+            <div style="grid-column: 2;">
+                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][2], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][2]}</span> 
+                <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][7]}</span>
+            </div>`;
+        }
+
+        if (keyAttributes[key][3] != undefined) {
+            output +=
+            `GetKey (upper alpha): 
+            <div style="grid-column: 2;">
+                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][3], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][3]}</span> 
+                <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][8]}</span>
+            </div>`;
+        }
+
+        if (keyAttributes[key][4] != undefined) {
+            output +=
+            `GetKey (lower alpha): 
+            <div style="grid-column: 2;">
+                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][4], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][4]}</span> 
+                <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][9]}</span>
+            </div>`;
+        }
+
+        output += `</div>`;
+
+        document.getElementById("info-output").innerHTML = output;
+    }
+</script>
