@@ -162,7 +162,9 @@
 </div>
 
 ## Info
-Blue boxes have the value in decimal, green has it in hex, and red is the name found in [ti84pceg.inc](https://raw.githubusercontent.com/EzCE/ez80-docs/main/assets/include/ti84pceg.inc).
+<span class="variable" style="background-color: #E8F4FB; line-height: 2rem;">Blue</span> = decimal value</br>
+<span class="variable" style="background-color: #E5FAEE; line-height: 2rem;">Green</span> = hex value</br>
+<span class="variable" style="background-color: #FBE6E6; line-height: 2rem;">Red</span> = equate name (see [ti84pceg.inc](https://raw.githubusercontent.com/EzCE/ez80-docs/main/assets/include/ti84pceg.inc))
 
 <div id="info-output">
     No key selected.
@@ -283,7 +285,7 @@ Blue boxes have the value in decimal, green has it in hex, and red is the name f
         `<div class="output-layout" style="line-height: 2rem; font-size: 1rem; max-width: 30rem;">
             GetCSC: 
             <div style="grid-column: 2;">
-                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][0], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E8F4FB;">${parseInt(keyAttributes[key][0], 16).toString(10)}</span> 
                 <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][0]}</span> 
                 <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][5]}</span>
             </div>`;
@@ -292,7 +294,7 @@ Blue boxes have the value in decimal, green has it in hex, and red is the name f
             output +=
             `GetKey (default): 
             <div style="grid-column: 2;">
-                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][1], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E8F4FB;">${parseInt(keyAttributes[key][1], 16).toString(10)}</span> 
                 <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][1]}</span> 
                 <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][6]}</span>
             </div>`;
@@ -302,7 +304,7 @@ Blue boxes have the value in decimal, green has it in hex, and red is the name f
             output +=
             `GetKey (2nd): 
             <div style="grid-column: 2;">
-                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][2], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E8F4FB;">${parseInt(keyAttributes[key][2], 16).toString(10)}</span> 
                 <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][2]}</span> 
                 <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][7]}</span>
             </div>`;
@@ -312,7 +314,7 @@ Blue boxes have the value in decimal, green has it in hex, and red is the name f
             output +=
             `GetKey (upper alpha): 
             <div style="grid-column: 2;">
-                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][3], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E8F4FB;">${parseInt(keyAttributes[key][3], 16).toString(10)}</span> 
                 <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][3]}</span> 
                 <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][8]}</span>
             </div>`;
@@ -322,7 +324,7 @@ Blue boxes have the value in decimal, green has it in hex, and red is the name f
             output +=
             `GetKey (lower alpha): 
             <div style="grid-column: 2;">
-                <span class="variable" style="background-color: #E8F4FB; margin-left: auto;">${parseInt(keyAttributes[key][4], 16).toString(10)}</span> 
+                <span class="variable" style="background-color: #E8F4FB;">${parseInt(keyAttributes[key][4], 16).toString(10)}</span> 
                 <span class="variable" style="background-color: #E5FAEE;">\$${keyAttributes[key][4]}</span> 
                 <span class="variable" style="background-color: #FBE6E6;">${keyAttributes[key][9]}</span>
             </div>`;
