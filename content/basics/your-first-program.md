@@ -90,7 +90,7 @@ flat assembler  version g.jmhx
 3 passes, 0.1 seconds, 109 bytes.
 ```
 
-If not, look back over your code and make sure it matches with the example. If so, try sending it to CEmu and testing it out! You can do this by opening CEmu and dragging the file onto the calculator.
+If not, look back over your code and make sure it matches with the example. If so, you're ready to try [sending it to CEmu](../testing-programs-with-cemu) and test it out!
 
 ## What Next?
 Now that you've made your first assembly program, it's time to create your own. For starters, you can try messing around with the source code of this example! Try displaying a different message, or naming the program something different! Once you're ready, you can use the information on instructions and system calls (WIP) to make your own programs.
