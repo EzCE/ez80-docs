@@ -6,9 +6,9 @@ params:
     name: trigFlags
 ---
 
-#### Bit 2 - trigDeg:
-Set if in degrees mode, reset if in radians mode.
-
 ### Address: $D00080 (ti.flags + $00)
 
 ### Size: 1 byte
+
+#### Bit 2 - trigDeg:
+Set if in degrees mode, reset if in radians mode.

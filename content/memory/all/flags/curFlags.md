@@ -6,6 +6,12 @@ params:
     name: curFlags
 ---
 
+Cursor flags.
+
+### Address: $D0008C (ti.flags + $0C)
+
+### Size: 1 byte
+
 #### Bit 2 - curAble:
 Set if cursor flash is enabled.
 
@@ -14,7 +20,3 @@ Set if the cursor is currently showing.
 
 #### Bit 4 - curLock:
 Set if the cursor is locked off.
-
-### Address: $D0008C (ti.flags + $0C)
-
-### Size: 1 byte

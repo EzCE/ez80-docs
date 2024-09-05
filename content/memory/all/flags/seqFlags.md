@@ -6,6 +6,10 @@ params:
     name: seqFlags
 ---
 
+### Address: $D0008F (ti.flags + $0F)
+
+### Size: 1 byte
+
 #### Bit 0 - webMode:
 Set for web mode, reset for normal sequence mode.
 
@@ -20,7 +24,3 @@ Set for vw mode.
 
 #### Bit 4 - sequw:
 Set for uw mode. (Might be unused?)
-
-### Address: $D0008F (ti.flags + $0F)
-
-### Size: 1 byte

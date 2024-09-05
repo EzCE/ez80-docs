@@ -6,9 +6,11 @@ params:
     name: fmtEditFlags
 ---
 
-#### Bit 0 - fmtEdit:
-Set for format number for editing.
+Numeric editing flags.
 
 ### Address: $D0008C (ti.flags + $0C)
 
 ### Size: 1 byte
+
+#### Bit 0 - fmtEdit:
+Set for format number for editing.

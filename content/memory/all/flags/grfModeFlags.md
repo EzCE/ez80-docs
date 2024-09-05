@@ -6,6 +6,12 @@ params:
     name: grfModeFlags
 ---
 
+Graph mode settings.
+
+### Address: $D00082 (ti.flags + $02)
+
+### Size: 1 byte
+
 #### Bit 4 - grfFuncM:
 Set if graph is in function mode.
 
@@ -17,7 +23,3 @@ Set if graph is in parametric mode.
 
 #### Bit 7 - grfRecurM:
 Set for recursion graph.
-
-### Address: $D00082 (ti.flags + $02)
-
-### Size: 1 byte

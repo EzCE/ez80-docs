@@ -6,6 +6,12 @@ params:
     name: appFlags
 ---
 
+Application flags.
+
+### Address: $D0008D (ti.flags + $0D)
+
+### Size: 1 byte
+
 #### Bit 0 - appWantIntrpt:
 Set to want on key interrupts.
 
@@ -29,7 +35,3 @@ Set for text cursor to cover entire word.
 
 #### Bit 7 - appExit:
 Set for application to handle exit key itself.
-
-### Address: $D0008D (ti.flags + $0D)
-
-### Size: 1 byte

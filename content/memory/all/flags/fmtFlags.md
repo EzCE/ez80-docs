@@ -6,6 +6,12 @@ params:
     name: fmtFlags
 ---
 
+Numeric format flags.
+
+### Address: $D0008A (ti.flags + $0A)
+
+### Size: 1 byte
+
 This section also has a related section at `$D0008B` (`ti.flags + $0B`) called `fmtOverride`, which is a copy of `fmtFlags` with conversion override.
 
 #### Bit 0 - fmtExponent:
@@ -22,7 +28,3 @@ Set for rectangular graph mode.
 
 #### Bit 7 - fmtPolar:
 Set for polar graph mode.
-
-### Address: $D0008A (ti.flags + $0A)
-
-### Size: 1 byte

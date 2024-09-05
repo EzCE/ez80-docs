@@ -6,6 +6,10 @@ params:
     name: grfDBFlags
 ---
 
+### Address: $D00084 (ti.flags + $04)
+
+### Size: 1 byte
+
 #### Bit 0 - grfDot:
 Set for dot, reset for line.
 
@@ -26,7 +30,3 @@ Set to not display an axis, reset if axis is displayed.
 
 #### Bit 6 - grfLabel:
 Set for axis labels, reset if axis labels are off.
-
-### Address: $D00084 (ti.flags + $04)
-
-### Size: 1 byte
