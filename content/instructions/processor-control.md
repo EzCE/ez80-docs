@@ -164,14 +164,14 @@ This operation pushes a return address (the address of the instruction immediate
 ## DJNZ
 
 {{< expand "djnz ofs8" "..." >}}
-Decrements `bc`, then checks if the resulting value in `bc` is 0. If it is not, the signed value `ofs8` is added to `pc`.
+Decrements `b`, then checks if the resulting value in `b` is 0. If it is not, the signed value `ofs8` is added to `pc`.
 * Opcode: `00010000` `ofs8`
 * Bytes: 2
 * Flags:
     * None
 * Cycles:
-    * If `bc` is not decremented to 0: 3F + 1
-    * If `bc` is decremented to 0: 2F
+    * If `b` is not decremented to 0: 3F + 1
+    * If `b` is decremented to 0: 2F
 {{< /expand >}}
 
 ## JP
