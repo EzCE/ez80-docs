@@ -363,7 +363,6 @@ Subtracts one from the value pointed to by `hl`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 1F + 1R + 1W + 1
 {{< /expand >}}
 
@@ -386,7 +385,6 @@ Subtracts one from the value in `reg8`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 1F
 {{< /expand >}}
 
@@ -422,7 +420,6 @@ Subtracts one from the value in `reg8i`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 2F
 {{< /expand >}}
 
@@ -440,7 +437,6 @@ Subtracts one from the 8-bit value pointed to by `regi` + `ofs8`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 3F + 1R + 1W + 1
 {{< /expand >}}
 
@@ -471,7 +467,6 @@ Adds one to the 8-bit value pointed to by `hl`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 1F + 1R + 1W + 1
 {{< /expand >}}
 
@@ -494,7 +489,6 @@ Adds one to the value in `reg8`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 1F
 {{< /expand >}}
 
@@ -530,7 +524,6 @@ Adds one to the value in `reg8i`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 2F
 {{< /expand >}}
 
@@ -548,7 +541,6 @@ Adds one to the 8-bit value pointed to by `regi` + `ofs8`.
     * H: Affected as [defined](../flags/#h-half-carry)
     * P/V: Detects overflow
     * N: Reset
-    * C: Affected as [defined](../flags/#c-carry)
 * Cycles: 3F + 1R + 1W + 1
 {{< /expand >}}
 
