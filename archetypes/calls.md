@@ -1,10 +1,10 @@
 ---
-title: System call name
+title: {{ .File.ContentBaseName }}
 geekdocHidden: true
 params:
     address: System call address
     category: System call category
-    name: System call name
+    name: {{ .File.ContentBaseName }}
 ---
 
 Overview of what the system call does / is used for
