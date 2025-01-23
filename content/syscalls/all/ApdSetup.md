@@ -7,7 +7,7 @@ params:
     name: ApdSetup
 ---
 
-Resets the APD counter. The value loaded depends on the status of the flag at bit 1 of `ti.flags + $41` (`$D000C1`). If the flag is reset, the value is loaded with `$49`. If the flag is sset, the value is loaded with `$1E1`.
+Resets the APD counter. The value loaded depends on the status of the flag at bit 1 of `ti.flags + $41` (`$D000C1`). If the flag is reset, the value is loaded with `$49`. If the flag is set, the value is loaded with `$1E1`.
 
 ### Address: $021144
 
