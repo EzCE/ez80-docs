@@ -176,6 +176,7 @@ Adds the value in `reg24` to the value in `regi`.
     | `bc`      | `00`      |
     | `de`      | `01`      |
     | `ix`/`iy` | `10`      |
+    | `sp`      | `11`      |
 * Bytes: 2
 * Flags:
     * H: Set if carry from bit 11, reset otherwise
