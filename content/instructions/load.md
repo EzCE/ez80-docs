@@ -12,7 +12,7 @@ weight: -10
 #### Load register
 
 {{< expand "ld reg8D, reg8S" "..." >}}
-The contents of register `reg8S` are stored into `reg8D`.
+The contents of register `reg8S` are stored into `reg8D`. Includes `1R` cycle for `ld reg8D, (hl)` or `1W` cycle for `ld (hl), reg8S`.
 * Opcode: `01` `reg8D` `reg8S`
     | Register | Bit Field |
     |----------|-----------|
@@ -26,7 +26,7 @@ The contents of register `reg8S` are stored into `reg8D`.
     | `(hl)`   | `110`     |
 * Bytes: 1
 * Flags: None
-* Cycles: 1F
+* Cycles: 1F (+1R/1W)
 {{< /expand >}}
 
 {{< expand "ld  reg8, regih" "..." >}}
@@ -523,17 +523,17 @@ Stores the value of `regir` into `reg8`.
 * Cycles: 2F
 {{< /expand >}}
 
-{{< expand "ld  a, mb" "..." >}}
-Stores the value of `mb` into `a`.
-* Opcode: `11101101` `01101110`
+{{< expand "ld  mb, a" "..." >}}
+Stores the value of `a` into `mb`.
+* Opcode: `11101101` `01101101`
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
 {{< /expand >}}
 
-{{< expand "ld  mb, a" "..." >}}
-Stores the value of `a` into `mb`.
-* Opcode: `11101101` `01101101`
+{{< expand "ld  a, mb" "..." >}}
+Stores the value of `mb` into `a`.
+* Opcode: `11101101` `01101110`
 * Bytes: 2
 * Flags: None
 * Cycles: 2F
