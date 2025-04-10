@@ -535,7 +535,7 @@ namespace ti?
 ?AbortPrgmode              := 00208F8h
 ?IsFullCntx                := 00208FCh
 ?AdrMRow                   := 0020900h
-?AdrmeLE                   := 0020904h
+?AdrMEle                   := 0020904h
 ?GetmatOP1A                := 0020908h
 ?Getm1toOP1                := 002090Ch
 ?Getm1tOP1A                := 0020910h
@@ -1283,7 +1283,7 @@ namespace ti?
 ?ClrAppChangeHook          := 00214A8h
 ?SetGraphicsHook           := 00214ACh
 ?ClrGraphicsHook           := 00214B0h
-?ILineNoGraphicsHook       := 00214B4h
+?IPointNoHook              := 00214B4h
 ?ILineNoHook               := 00214B8h
 ;                          equ 00214BCh
 ?DeleteTempPrograms        := 00214C0h
@@ -1349,7 +1349,7 @@ namespace ti?
 ?ChkTmr                    := 00215B0h
 ?ClockOff                  := 00215B4h
 ?ClockOn                   := 00215B8h
-;                          equ 00215BCh
+?DayOfWeek                 := 00215BCh
 ?GetDate                   := 00215C0h
 ?GetDateString             := 00215C4h
 ?GetDtFmt                  := 00215C8h
@@ -1609,8 +1609,8 @@ namespace ti?
 ;                          equ 00219C0h
 ;                          equ 00219C4h
 ;                          equ 00219C8h
-;                          equ 00219CCh
-;                          equ 00219D0h
+?UnhighlightRect           := 00219CCh
+?HighlightRect             := 00219D0h
 ;                          equ 00219D4h
 ;                          equ 00219D8h
 ?EnterSelfTest             := 00219DCh
