@@ -21,7 +21,7 @@ project                         // The main folder for your project
 └── readme                      // A file explaining what your program does and how to use it (optional)
 ```
 
-We'll start by downloading the include files. These contain system calls and other equates you'll use in your programs. Make a folder called `include` in your project folder and download the five include files for fasmg made by [jacobly](https://github.com/jacobly0), which you can get in a zip [here](https://github.com/EzCE/ez80-docs/raw/main/assets/include.zip). Extract all five of these files into the folder you previously created called `include`.
+We'll start by downloading the include files. These contain system calls and other equates you'll use in your programs. Make a folder called `include` in your project folder and download the necessary include files for fasmg, which you can find [here](../../other/includes). Extract all five of these files into the folder you previously created called `include`.
 
 ## Writing the Program
 

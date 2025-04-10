@@ -1,9 +1,9 @@
 ---
-title: Memory area name
+title: {{ .File.ContentBaseName }}
 geekdocHidden: true
 params:
     address: Memory address
-    name: Memory area name
+    name: {{ .File.ContentBaseName }}
 ---
 
 Overview of what the memory area does / is used for

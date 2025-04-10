@@ -1,8 +1,8 @@
 ---
-title: Hook name
+title: {{ .File.ContentBaseName }}
 geekdocHidden: true
 params:
-    name: Hook name
+    name: {{ .File.ContentBaseName }}
 ---
 
 BRIEF overview of what the hook does / is used for
