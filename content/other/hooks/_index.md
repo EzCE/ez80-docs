@@ -5,12 +5,16 @@ weight: -20
 
 {{< toc >}}
 
+{{ hint type=important }}
+As of TI-OS version 5.8.3, TI-OS prevents hooks locations outside of apps and the OS itself. In order for your hooks to work on all OS versions, it is recommended to use an app to store your hook code. Provided that the pointer to the hook code is located in the correct area of memory, the hook installation / removal calls can be used from any context, including programs.
+{{ /hint }}
+
 ## Introduction
-Hooks are a feature of TI-OS which allow user-created apps and programs to run code when certain events in TI-OS are triggered. TI-OS supports a number of different hooks, which are listed below.
+Hooks are a feature of TI-OS which allow user-created apps and programs to run code when certain events in TI-OS are triggered. TI-OS supports a number of different hooks, which are listed [below](#list-of-hooks).
 
 Each hook type typically has a system call for both setting and clearing itself, along with a flag which is set when the a hook of that type is installed and a 3-byte section of RAM which holds a pointer to the hook's code if one is installed.
 
-When working with a user-created hook, the code for the hook should be located in the **safest location** feasible. If a hook is stored in a place like RAM which is prone to frequent movement, it is likely to be quickly destroyed. Ideally, hooks are stored in an app (which is stored in a stable portion of flash memory), but for smaller projects this may seem like overkill. Another possible solution is to store it in an archived AppVar. A source code template for making a hook stored in an AppVar with an installer program can be found [here](https://github.com/EzCE/hook-template/).
+When working with a user-created hook, the code for the hook should be located in the **safest location** feasible. If a hook is stored in a place like RAM which is prone to frequent movement, it is likely to be quickly destroyed. Ideally, hooks are stored in an app (which is stored in a stable portion of flash memory), but for smaller projects this may seem like overkill. Another possible solution (on OS versions **Pre-5.8.3**) is to store it in an archived AppVar. A source code template for making a hook stored in an AppVar with an installer program can be found [here](https://github.com/EzCE/hook-template/).
 
 ## Working with hooks
 In order for TI-OS to recognize a section of code as a valid hook, the first byte of it **must** be `$83`. This can be achieved as follows:
