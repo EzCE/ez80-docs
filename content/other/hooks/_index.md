@@ -6,7 +6,7 @@ weight: -20
 {{< toc >}}
 
 {{< hint type=important >}}
-As of TI-OS version 5.8.3, TI-OS prevents hooks locations outside of apps and the OS itself. In order for your hooks to work on all OS versions, it is recommended to use an app to store your hook code. Provided that the pointer to the hook code is located in the correct area of memory, the hook installation / removal calls can be used from any context, including programs.
+As of TI-OS version 5.8.3, TI-OS prevents hook pointer locations outside of apps and the OS itself. In order for your hooks to work on all OS versions, it is recommended to use an app to store your hook code. Provided that the pointer to the hook code is located in the correct area of memory, the hook installation / removal calls can be used from any context, including programs.
 {{< /hint >}}
 
 ## Introduction
