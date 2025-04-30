@@ -5,9 +5,9 @@ weight: -20
 
 {{< toc >}}
 
-{{ hint type=important }}
+{{< hint type=important >}}
 As of TI-OS version 5.8.3, TI-OS prevents hooks locations outside of apps and the OS itself. In order for your hooks to work on all OS versions, it is recommended to use an app to store your hook code. Provided that the pointer to the hook code is located in the correct area of memory, the hook installation / removal calls can be used from any context, including programs.
-{{ /hint }}
+{{< /hint >}}
 
 ## Introduction
 Hooks are a feature of TI-OS which allow user-created apps and programs to run code when certain events in TI-OS are triggered. TI-OS supports a number of different hooks, which are listed [below](#list-of-hooks).
