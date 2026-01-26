@@ -7,6 +7,8 @@ params:
     name: PPutawayPrompt
 ---
 
+### Address: $020174
+
 This routine calls the current context's [Partial PutAway](../../../memory/all/cxPPutAway) vector, [PutAway](../../../memory/all/cxPutAway) vector, and then resets the `promptEdit` flag. It is equivalent to this:
 
 ```asm
@@ -14,8 +16,6 @@ call PPutAway
 call PutAway
 res promptEdit, (iy + promptFlags)
 ```
-
-### Address: $020174
 
 ### Inputs:
 * [`cxPPutAway`](../../../memory/all/cxPPutAway): Context's current Partial PutAway vector.

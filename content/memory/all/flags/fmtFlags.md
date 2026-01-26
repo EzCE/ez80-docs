@@ -6,9 +6,9 @@ params:
     name: fmtFlags
 ---
 
-Numeric format flags.
-
 ### Address: $D0008A (ti.flags + $0A)
+
+Numeric format flags.
 
 ### Size: 1 byte
 

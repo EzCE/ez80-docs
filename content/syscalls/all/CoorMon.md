@@ -26,8 +26,8 @@ If this routine is called, it will not return.
 ### Address: $020150
 
 ### Inputs:
-* `AppAllowContext`: Set to allow `Mon` to pass context keys, to the [`cxMain`](../../../memory/all/cxMain) routine.
-* `CurLock`: Set to lock the cursor off.
+* [`AppAllowContext`](../../../memory/all/flags/APIFlg#bit-0---appallowcontext): Set to allow [`Mon`](../Mon) to pass context keys, to the [`cxMain`](../../../memory/all/cxMain) routine.
+* [`curLock`](../../../memory/all/flags/curFlags#bit-4---curlock): Set to lock the cursor off.
 * Possibly more?
 
 ### Outputs:

@@ -7,9 +7,9 @@ params:
     name: AbsO1PAbsO2
 ---
 
-Takes the absolute value in `OP1` and `OP2` and adds them together.
-
 ### Address: $0201A0
+
+Takes the absolute value in `OP1` and `OP2` and adds them together.
 
 ### Inputs:
 * `OP1`: First number to add.

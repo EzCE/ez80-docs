@@ -6,9 +6,9 @@ params:
     name: tblFlags
 ---
 
-Table flags.
-
 ### Address: $D00093 (ti.flags + $13)
+
+Table flags.
 
 ### Size: 1 byte
 

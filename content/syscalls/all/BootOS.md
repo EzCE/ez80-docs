@@ -7,13 +7,13 @@ params:
     name: BootOS
 ---
 
+### Address: $020108
+
 As the name suggests, this call boots the OS.
 
 {{< hint type=caution >}}
 If this routine is called, it will not return.
 {{< /hint >}}
-
-### Address: $020108
 
 ### Inputs:
 * None.

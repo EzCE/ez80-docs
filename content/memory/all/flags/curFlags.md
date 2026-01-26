@@ -6,9 +6,9 @@ params:
     name: curFlags
 ---
 
-Cursor flags.
-
 ### Address: $D0008C (ti.flags + $0C)
+
+Cursor flags.
 
 ### Size: 1 byte
 

@@ -7,9 +7,9 @@ params:
     name: CallFontHook
 ---
 
-Checks if a valid font hook is currently installed. If so, that hook is called, otherwise, this routine returns.
-
 ### Address: $020130
+
+Checks if a valid font hook is currently installed. If so, that hook is called, otherwise, this routine returns.
 
 ### Inputs:
 * None.

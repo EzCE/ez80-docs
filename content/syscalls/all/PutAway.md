@@ -7,9 +7,9 @@ params:
     name: PutAway
 ---
 
-This routine calls the current context's [PutAway](../../../memory/all/cxPutAway) vector.
-
 ### Address: $02017C
+
+This routine calls the current context's [PutAway](../../../memory/all/cxPutAway) vector.
 
 ### Inputs:
 * [`cxPutAway`](../../../memory/all/cxPutAway): Context's current PutAway vector.

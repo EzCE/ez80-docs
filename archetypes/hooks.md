@@ -5,9 +5,10 @@ params:
     name: {{ .File.ContentBaseName }}
 ---
 
+### Hook Pointer Address: $000000
+
 BRIEF overview of what the hook does / is used for
 
-### Hook Pointer Address: $000000
 ### Hook Enable Call: 
 ### Hook Disable Call: 
 ### Hook Trigger Call: <!-- If applicable -->

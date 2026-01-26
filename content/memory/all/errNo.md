@@ -6,6 +6,8 @@ params:
     name: errNo
 ---
 
+### Address: $D008DF
+
 Holds an error code for certain system error routines. These are taken from **ti84pceg.inc**, and you should note that some allow "Goto" by default while others do not. However, this behavior can be changed by modifying bit 7. To allow the "Goto" option for a system error, bit 7 of the error code should be set, and to prevent it, bit 7 should be reset.
 
 {{< expand "Error Codes" "..." >}}
@@ -70,7 +72,5 @@ Holds an error code for certain system error routines. These are taken from **ti
 | E_Xmit            | $38                |
 | E_MemFull         | $39                |
 {{< /expand >}}
-
-### Address: $D008DF
 
 ### Size: 1 byte

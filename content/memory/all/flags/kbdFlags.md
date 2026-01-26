@@ -6,9 +6,9 @@ params:
     name: kbdFlags
 ---
 
-Keyboard scan flags.
-
 ### Address: $D00080 (ti.flags + $00)
+
+Keyboard scan flags.
 
 ### Size: 1 byte
 

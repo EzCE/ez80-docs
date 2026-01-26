@@ -7,13 +7,13 @@ params:
     name: Arc_Unarc
 ---
 
+### Address: $021448
+
 Swaps a specified variable between RAM and Archive.
 
 {{< hint type=note >}}
 Throws an OS error if any problem is encountered, including attempting to pass a variable which cannot be archived / unarchived.
 {{< /hint >}}
-
-### Address: $021448
 
 ### Inputs:
 * OP1: Type and name of the variable to swap.

@@ -7,9 +7,9 @@ params:
     name: InvertRect
 ---
 
-Inverts the colors of a rectangular area on the screen.
-
 ### Address: $02121C
+
+Inverts the colors of a rectangular area on the screen.
 
 ### Inputs:
 * `hl`: Top-left X coordinate of the rectangle.

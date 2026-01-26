@@ -7,9 +7,9 @@ params:
     name: PPutAway
 ---
 
-This routine calls the current context's [Partial PutAway](../../../memory/all/cxPPutAway) vector.
-
 ### Address: $020178
+
+This routine calls the current context's [Partial PutAway](../../../memory/all/cxPPutAway) vector.
 
 ### Inputs:
 * [`cxPPutAway`](../../../memory/all/cxPPutAway): Context's current Partial PutAway vector.

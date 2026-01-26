@@ -6,9 +6,9 @@ params:
     name: grfModeFlags
 ---
 
-Graph mode settings.
-
 ### Address: $D00082 (ti.flags + $02)
+
+Graph mode settings.
 
 ### Size: 1 byte
 

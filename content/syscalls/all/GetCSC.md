@@ -7,9 +7,9 @@ params:
     name: GetCSC
 ---
 
-This routine loads the current keyboard scancode from [`kbdScanCode`](../../../memory/all/kbdScanCode) into `a`, then clears [`kbdScanCode`](../../../memory/all/kbdScanCode). If no key is pressed, `a` is loaded with $00. Note that calling this routine will also enable interrupts. An interactive keypad with all key values (including scan codes) can be found [here](../../../other/keypad).
-
 ### Address: $02014C
+
+This routine loads the current keyboard scancode from [`kbdScanCode`](../../../memory/all/kbdScanCode) into `a`, then clears [`kbdScanCode`](../../../memory/all/kbdScanCode). If no key is pressed, `a` is loaded with $00. Note that calling this routine will also enable interrupts. An interactive keypad with all key values (including scan codes) can be found [here](../../../other/keypad).
 
 ### Inputs:
 * None.

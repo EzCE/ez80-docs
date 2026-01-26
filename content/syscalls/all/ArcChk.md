@@ -7,9 +7,9 @@ params:
     name: ArcChk
 ---
 
-Finds the amount of free archive space and stores it to [tempFreeArc](../../../memory/all/tempFreeArc).
-
 ### Address: $022040
+
+Finds the amount of free archive space and stores it to [tempFreeArc](../../../memory/all/tempFreeArc).
 
 ### Inputs:
 * None

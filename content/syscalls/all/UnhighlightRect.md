@@ -7,9 +7,9 @@ params:
     name: UnhighlightRect
 ---
 
-Un-highlights a rectangular area of the screen by changing non-black pixels to white. See also [HighlightRect](../HighlightRect).
-
 ### Address: $0219CC
+
+Un-highlights a rectangular area of the screen by changing non-black pixels to white. See also [HighlightRect](../HighlightRect).
 
 ### Inputs:
 * `hl`: Top-left X coordinate of the area to un-highlight.

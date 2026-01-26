@@ -6,9 +6,9 @@ params:
     name: sGrFlags
 ---
 
-Graph split flags.
-
 ### Address: $D00094 (ti.flags + $14)
+
+Graph split flags.
 
 ### Size: 1 byte
 

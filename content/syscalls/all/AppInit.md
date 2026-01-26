@@ -7,6 +7,8 @@ params:
     name: AppInit
 ---
 
+### Address: $020190
+
 This routine is used by applications to override the system vectors with the app's own vectors.
 
 For more info on each vector, see:
@@ -16,8 +18,6 @@ For more info on each vector, see:
 - [ReDisplay](../../../memory/all/cxReDisp)
 - [Error EP](../../../memory/all/cxErrorEP)
 - [Window Size Change](../../../memory/all/cxSizeWind)
-
-### Address: $020190
 
 ### Inputs:
 * `hl`: Pointer to vector table.

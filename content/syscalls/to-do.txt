@@ -228,7 +228,7 @@ IsO1NonTLstOrProg         := 00204C0h
 IsO1NonTempLst            := 00204C4h
 Is_A_LstOrCLst            := 00204C8h
 Chk_HL_999                := 00204CCh
-:=_Or_New:=             := 00204D0h
+Equ_Or_NewEqu             := 00204D0h
 Errd_OP1NotPos            := 00204D4h
 Errd_OP1Not_R             := 00204D8h
 Errd_OP1NotPosInt         := 00204DCh
@@ -262,9 +262,9 @@ CreateTRMat               := 0020548h
 CreateRMat                := 002054Ch
 CreateTStrng              := 0020550h
 CreateStrng               := 0020554h
-Create0:=                := 0020558h
-Createt:=                := 002055Ch
-Create:=                 := 0020560h
+Create0Equ                := 0020558h
+CreatetEqu                := 002055Ch
+CreateEqu                 := 0020560h
 CreateGDB                 := 0020564h
 CreateProg                := 0020568h
 ChkDel                    := 002056Ch
@@ -672,7 +672,7 @@ GDispToken                := 0020BB4h
 GrdeCoda                  := 0020BB8h
 LabCoor                   := 0020BBCh
 CoorDisp                  := 0020BC0h
-Tmp:=NoSrc               := 0020BC4h
+TmpEquNoSrc               := 0020BC4h
 GrLabels                  := 0020BC8h
 YPixSet                   := 0020BCCh
 XPixSet                   := 0020BD0h
@@ -716,7 +716,7 @@ InitNSeq                  := 0020C64h
 YRes                      := 0020C68h
 Ceiling                   := 0020C6Ch
 PutXY                     := 0020C70h
-Put:=No                  := 0020C74h
+PutEquNo                  := 0020C74h
 PDspGrph                  := 0020C78h
 HorizCmd                  := 0020C7Ch
 VertCmd                   := 0020C80h
@@ -760,7 +760,7 @@ BufPeek1                  := 0020D14h
 BufPeek2                  := 0020D18h
 BufPeek3                  := 0020D1Ch
 BufToBtm                  := 0020D20h
-SetupEdit:=              := 0020D24h
+SetupEditEqu              := 0020D24h
 BufToTop                  := 0020D28h
 IsEditFull                := 0020D2Ch
 IsEditEmpty               := 0020D30h
@@ -782,9 +782,9 @@ DispHead                  := 0020D6Ch
 DispTail                  := 0020D70h
 PutTokString              := 0020D74h
 SetUpEditCmd              := 0020D78h
-SetEmptyedit:=           := 0020D7Ch
+SetEmptyeditEqu           := 0020D7Ch
 SetEmptyEditPtr           := 0020D80h
-CloseEdit:=              := 0020D84h
+CloseEditEqu              := 0020D84h
 GetPrevTok                := 0020D88h
 GetKey                    := 0020D8Ch
 CanIndic                  := 0020D90h
@@ -810,8 +810,8 @@ FormToTok                 := 0020DDCh
 DispInterval              := 0020DE0h
 DispLstName               := 0020DE4h
 DispSLstNameHL            := 0020DE8h
-Edit:=                   := 0020DECh
-Close:=Field             := 0020DF0h
+EditEqu                   := 0020DECh
+CloseEquField             := 0020DF0h
 AutoSelect                := 0020DF4h
 DispYEOS                  := 0020DF8h
 DispNumEOS                := 0020DFCh
@@ -937,7 +937,7 @@ CkParsEnd                 := 0020FD8h
 StoTypeArg                := 0020FDCh
 ConvDim                   := 0020FE0h
 ConvDim00                 := 0020FE4h
-Ahead:=al                := 0020FE8h
+AheadEqual                := 0020FE8h
 ParseHeads                := 0020FECh
 ParseHead                 := 0020FF0h
 StoCmpReals               := 0020FF8h
@@ -959,8 +959,8 @@ StoRand                   := 0021034h
 RandInit                  := 0021038h
 ResetStacks               := 002103Ch
 Factorial                 := 0021040h
-Y:=OnOff                 := 0021044h
-:=SelUnsel               := 0021048h
+YEquOnOff                 := 0021044h
+EquSelUnsel               := 0021048h
 ITSolver                  := 002104Ch
 GRITSolver                := 0021050h
 ITSolverB                 := 0021054h
@@ -992,7 +992,7 @@ DrawAxes                  := 00210B8h
 SetPenX                   := 00210BCh
 SetPenY                   := 00210C0h
 SetPenT                   := 00210C4h
-Tan:=Disp                := 00210C8h
+TanEquDisp                := 00210C8h
 PutAns                    := 00210CCh
 DispOP1A                  := 00210D0h
                           := 00210D4h
@@ -1284,7 +1284,7 @@ TenXNoClr                 := 0021560h
 GetVarVersion             := 002156Ch
 ParseGraphCmdToken        := 0021570h
                           := 0021574h
-DeleteTempEdit:=         := 0021578h
+DeleteTempEditEqu         := 0021578h
 PromptMoveBackLeft        := 002157Ch
 WPutSEOLRes10E            := 0021580h
 InvertTextInsMode         := 0021584h
@@ -1346,7 +1346,7 @@ Draw32                    := 0021658h
                           := 0021664h
 DrawPlotStatus            := 0021668h
 DrawTableEditor           := 002166Ch
-DisplayListName:=als     := 0021670h
+DisplayListNameEquals     := 0021670h
 DisplayListHeader         := 0021674h
 DispMatrixDimensions      := 0021678h
 HighlightListEdItem       := 002167Ch
@@ -1361,7 +1361,7 @@ MatrixName                := 0021688h
 ChkCxMainPtr              := 00216A0h
 NumError02_               := 00216A4h
                           := 00216A8h
-SetupEmptyEditTemp:=     := 00216ACh
+SetupEmptyEditTempEqu     := 00216ACh
 Res1IY0E                  := 00216B0h
 RestoreBuffer             := 00216B4h
                           := 00216B8h
@@ -1370,7 +1370,7 @@ RestoreBuffer             := 00216B4h
                           := 00216C4h
                           := 00216C8h
                           := 00216CCh
-DisplayList:=als         := 00216D0h
+DisplayListEquals         := 00216D0h
 GetCurPlotListOffset      := 00216D4h
 GoToLastRow               := 00216D8h
 DrawRectBorder_           := 00216DCh
@@ -1385,7 +1385,7 @@ NamedListToOP1            := 00216F0h
 InitUSBDeviceCallback     := 0021700h
 KillUSBDevice             := 0021704h
 SetUSBConfiguration       := 0021708h
-R:=estUSBData            := 002170Ch
+RequestUSBData            := 002170Ch
 StopReceivingUSBData      := 0021710h
 SetVertGraphActive        := 0021714h
 ClrVertGraphActive        := 0021718h
@@ -1413,7 +1413,7 @@ UpdateStatPlotLists       := 002176Ch
 ChkSomethingElseFPS5      := 0021770h
 ChkSomethingFPS5          := 0021774h
 VDispRealOP1              := 0021778h
-DispX:=alsNum            := 002177Ch
+DispXEqualsNum            := 002177Ch
 ResetGraphSettings        := 0021780h
 InitializeVariables       := 0021784h
 ;_ret                     := 0021788h
@@ -1425,9 +1425,9 @@ GrPutawayFull             := 002179Ch
 ;_ret                     := 00217A0h
 ToggleUSBSmartPadInput    := 00217A4h
 IsUSBDeviceConnected      := 00217A8h
-Polar:=ToOP1             := 00217ACh
-ParamX:=ToOP1            := 00217B0h
-ParamY:=ToOP1            := 00217B4h
+PolarEquToOP1             := 00217ACh
+ParamXEquToOP1            := 00217B0h
+ParamYEquToOP1            := 00217B4h
 DispTestModeResetComplete := 00217B8h
 PTTReset                  := 00217BCh
 FindAppCustom             := 00217C0h
@@ -1862,7 +1862,7 @@ os.RclAns                 := 0021E70h
                           := 0021E80h
                           := 0021E84h
                           := 0021E88h
-SetPolar:=ToOP1          := 0021E8Ch
+SetPolarEquToOP1          := 0021E8Ch
                           := 0021E90h
                           := 0021E94h
                           := 0021E98h
@@ -1979,7 +1979,7 @@ ChkInRamB                 := 0022048h
 os.InitUSBDeviceCallback  := 0022058h
 os.KillUSBDevice          := 002205Ch
 os.SetUSBConfiguration    := 0022060h
-os.R:=estUSBData         := 0022064h
+os.RequestUSBData         := 0022064h
 os.StopReceivingUSBData   := 0022068h
                           := 002206Ch
                           := 0022070h
@@ -2097,8 +2097,8 @@ os.GetStringData          := 002219Ch
                           := 0022234h
                           := 0022238h
                           := 002223Ch
-os.Create:=ation         := 0022240h
-os.Get:=ationData        := 0022244h
+os.CreateEquation         := 0022240h
+os.GetEquationData        := 0022244h
  Boot Calls
 -----------------------------------
 boot.GetHardwareVers      := 0000084h

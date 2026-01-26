@@ -13,9 +13,9 @@ params:
     name: Memory area name
 ---
 
-Overview of what the memory area does / is used for
-
 ### Address: $000000
+
+Overview of what the memory area does / is used for
 
 ### Size: Size of the area in bytes
 ````

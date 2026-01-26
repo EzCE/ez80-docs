@@ -7,6 +7,8 @@ params:
     name: ClearRect
 ---
 
+### Address: $021218
+
 Draws a solid white filled rectangle to the screen.
 
 This call behaves the same as:
@@ -17,8 +19,6 @@ ld.sis (fillRectColor), hl
 pop hl
 call FillRect
 ```
-
-### Address: $021218
 
 ### Inputs:
 * `hl`: Top-left X coordinate of the rectangle.

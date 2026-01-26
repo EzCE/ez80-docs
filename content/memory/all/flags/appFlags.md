@@ -6,9 +6,9 @@ params:
     name: appFlags
 ---
 
-Application flags.
-
 ### Address: $D0008D (ti.flags + $0D)
+
+Application flags.
 
 ### Size: 1 byte
 

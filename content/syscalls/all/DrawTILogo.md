@@ -7,9 +7,9 @@ params:
     name: DrawTILogo
 ---
 
-Draws the Texas Instruments logo and text, along with copyright info if specified.
-
 ### Address: $021B00
+
+Draws the Texas Instruments logo and text, along with copyright info if specified.
 
 ### Inputs:
 * `a`: Set to 0 to display copyright info.

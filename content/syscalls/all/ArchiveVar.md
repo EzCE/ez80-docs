@@ -7,9 +7,9 @@ params:
     name: ArchiveVar
 ---
 
-Archives a specified variable. This is a subroutine of [Arc_Unarc](../Arc_Unarc).
-
 ### Address: $02144C
+
+Archives a specified variable. This is a subroutine of [Arc_Unarc](../Arc_Unarc).
 
 ### Inputs:
 * Uses the outputs of [ChkFindSym](../ChkFindSym).

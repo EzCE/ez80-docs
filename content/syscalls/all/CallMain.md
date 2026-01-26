@@ -7,9 +7,9 @@ params:
     name: CallMain
 ---
 
-This routine calls the current context's [Main](../../../memory/all/cxMain) vector.
-
 ### Address: $020188
+
+This routine calls the current context's [Main](../../../memory/all/cxMain) vector.
 
 ### Inputs:
 * [`cxMain`](../../../memory/all/cxMain): Context's current Main vector.

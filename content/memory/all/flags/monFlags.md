@@ -6,9 +6,9 @@ params:
     name: monFlags
 ---
 
-Monitor flags.
-
 ### Address: $D00081 (ti.flags + $01)
+
+Monitor flags.
 
 ### Size: 1 byte
 

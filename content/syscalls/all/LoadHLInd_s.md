@@ -7,9 +7,9 @@ params:
     name: LoadHLInd_s
 ---
 
-Loads the 16-bit value pointed to by the address in `hl` into `hl`, and loads `hlu` with $00.
-
 ### Address: $020138
+
+Loads the 16-bit value pointed to by the address in `hl` into `hl`, and loads `hlu` with $00.
 
 ### Inputs:
 * `hl`: Contains address.

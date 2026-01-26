@@ -7,9 +7,9 @@ params:
     name: ErrorEP
 ---
 
-This routine calls the current context's [Error EP](../../../memory/all/cxErrorEP) vector.
-
 ### Address: $020184
+
+This routine calls the current context's [Error EP](../../../memory/all/cxErrorEP) vector.
 
 ### Inputs:
 * [`cxErrorEP`](../../../memory/all/cxErrorEP): Context's current Error EP vector.

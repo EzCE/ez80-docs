@@ -7,9 +7,9 @@ params:
     name: HighlightRect
 ---
 
-Highlights a rectangular area of the screen by changing non-black pixels to a specified color. The light cyan color used by TI-OS when highlighting memory entries is `$7FFE`. See also [UnhighlightRect](../UnhighlightRect).
-
 ### Address: $0219D0
+
+Highlights a rectangular area of the screen by changing non-black pixels to a specified color. The light cyan color used by TI-OS when highlighting memory entries is `$7FFE`. See also [UnhighlightRect](../UnhighlightRect).
 
 ### Inputs:
 * `hl`: Top-left X coordinate of the area to highlight.

@@ -6,9 +6,9 @@ params:
     name: shiftFlags
 ---
 
-Flags for <kbd>2nd</kbd> and <kbd>alpha</kbd>.
-
 ### Address: $D00092 (ti.flags + $12)
+
+Flags for <kbd>2nd</kbd> and <kbd>alpha</kbd>.
 
 ### Size: 1 byte
 

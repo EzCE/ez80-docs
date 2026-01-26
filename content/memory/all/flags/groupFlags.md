@@ -6,9 +6,9 @@ params:
     name: groupFlags
 ---
 
-Flags used temporarily in Arc_Unarc.
-
 ### Address: $D000A6 (ti.flags + $26)
+
+Flags used temporarily in Arc_Unarc.
 
 ### Size: 1 byte
 

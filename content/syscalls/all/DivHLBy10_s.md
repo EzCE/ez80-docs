@@ -7,9 +7,9 @@ params:
     name: DivHLBy10_s
 ---
 
-Divides the 16-bit value in `hl` by 10.
-
 ### Address: $020140
+
+Divides the 16-bit value in `hl` by 10.
 
 ### Inputs:
 * `hl`: 16-bit dividend.

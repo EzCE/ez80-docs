@@ -6,8 +6,8 @@ params:
     name: asm_Flag2
 ---
 
-This byte is reserved for assembly programs to create their own flags.
-
 ### Address: $D000A2 (ti.flags + $22)
+
+This byte is reserved for assembly programs to create their own flags.
 
 ### Size: 1 byte

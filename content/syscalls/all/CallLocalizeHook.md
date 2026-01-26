@@ -7,9 +7,9 @@ params:
     name: CallLocalizeHook
 ---
 
-Checks if a valid localization hook is currently installed. If so, that hook is called, otherwise, this routine returns.
-
 ### Address: $020134
+
+Checks if a valid localization hook is currently installed. If so, that hook is called, otherwise, this routine returns.
 
 ### Inputs:
 * None.

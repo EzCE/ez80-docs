@@ -7,9 +7,9 @@ params:
     name: AppSetup
 ---
 
-Cleans up flags and hooks before running a flash application. 
-
 ### Address: $021148
+
+Cleans up flags and hooks before running a flash application. 
 
 ### Inputs:
 * Set bit in [`hookflags2Override`](../../../memory/all/flags/hookflags2Override), [`hookflags3Override`](../../../memory/all/flags/hookflags3Override), or [`hookflags4Override`](../../../memory/all/flags/hookflags4Override) corresponding to a [`hookflags2`](../../../memory/all/flags/hookflags2), [`hookflags3`](../../../memory/all/flags/hookflags3), or [`hookflags4`](../../../memory/all/flags/hookflags4) hook to uninstall that hook.

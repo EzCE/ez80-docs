@@ -6,9 +6,9 @@ params:
     name: cmdFlags
 ---
 
-Command editor flags.
-
 ### Address: $D0008C (ti.flags + $0C)
+
+Command editor flags.
 
 ### Size: 1 byte
 

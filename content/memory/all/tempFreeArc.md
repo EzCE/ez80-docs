@@ -6,8 +6,8 @@ params:
     name: tempFreeArc
 ---
 
-Holds the number of free bytes of Archive remaining stored by [ArcChk](../../../syscalls/all/ArcChk).
-
 ### Address: $D02655
+
+Holds the number of free bytes of Archive remaining stored by [ArcChk](../../../syscalls/all/ArcChk).
 
 ### Size: 3 bytes

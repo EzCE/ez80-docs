@@ -7,9 +7,9 @@ params:
     name: CpHLDE
 ---
 
-Compares a 24-bit value in `hl` to a 24-bit value in `de`. The output is similar to the [`cp`](../../../instructions/arithmetic/#cp) instruction.
-
 ### Address: $02013C
+
+Compares a 24-bit value in `hl` to a 24-bit value in `de`. The output is similar to the [`cp`](../../../instructions/arithmetic/#cp) instruction.
 
 ### Inputs:
 * `hl`: Value.

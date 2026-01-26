@@ -6,9 +6,9 @@ params:
     name: indicFlags
 ---
 
-Indicator flags.
-
 ### Address: $D00092 (ti.flags + $12)
+
+Indicator flags.
 
 ### Size: 1 byte
 

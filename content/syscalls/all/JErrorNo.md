@@ -7,6 +7,8 @@ params:
     name: JErrorNo
 ---
 
+### Address: $02012C
+
 This routine displays a system error or calls an error handler, based on the value at [`errNo`](../../../memory/all/errNo). To allow the "Goto" option for a system error, bit 7 of the error code should be set, and to prevent it, bit 7 should be reset.
 A list of system error codes is below. These are taken from **ti84pceg.inc**, and you should note that some allow "Goto" by default while others do not. However, this behavior can be changed by modifying bit 7.
 
@@ -76,8 +78,6 @@ A list of system error codes is below. These are taken from **ti84pceg.inc**, an
 {{< hint type=caution >}}
 If this routine is called, it will not return.
 {{< /hint >}}
-
-### Address: $02012C
 
 ### Inputs:
 * Value at [`errNo`](../../../memory/all/errNo) contains error code.

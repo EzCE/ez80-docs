@@ -6,9 +6,9 @@ params:
     name: fmtEditFlags
 ---
 
-Numeric editing flags.
-
 ### Address: $D0008C (ti.flags + $0C)
+
+Numeric editing flags.
 
 ### Size: 1 byte
 

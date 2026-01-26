@@ -7,9 +7,9 @@ params:
     name: SizeWind
 ---
 
-This routine calls the current context's [Window Size Change](../../../memory/all/cxSizeWind) vector.
-
 ### Address: $020180
+
+This routine calls the current context's [Window Size Change](../../../memory/all/cxSizeWind) vector.
 
 ### Inputs:
 * [`cxSizeWind`](../../../memory/all/cxSizeWind): Context's current Window Size Change vector.

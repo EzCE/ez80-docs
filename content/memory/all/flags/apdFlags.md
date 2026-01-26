@@ -6,9 +6,9 @@ params:
     name: apdFlags
 ---
 
-Automatic power-down flags.
-
 ### Address: $D00088 (ti.flags + $08)
+
+Automatic power-down flags.
 
 ### Size: 1 byte
 

@@ -7,13 +7,13 @@ params:
     name: Rst28Handler
 ---
 
+### Address: $02011C
+
 This routine is jumped to following `di \ rsmix` as a result of the [`rst 28`](../../../instructions/processor-control/#rst) instruction.
 
 {{< hint type=warning >}}
 Using this call will cause a crash.
 {{< /hint >}}
-
-### Address: $02011C
 
 ### Inputs:
 * None.

@@ -8,6 +8,8 @@ params:
 ---
 
 
+### Address: $020578
+
 {{< hint type=note >}}
 WikiTI also calls this [UpdatePointers](https://wikiti.brandonw.net/index.php?title=83Plus:BCALLs:4345&oldid=10999).
 {{< /hint >}}
@@ -45,8 +47,6 @@ Updates 27 pointers after memory has been inserted or deleted.
 | $D01FF9 | Unknown       |
 | $D0068A | Unknown       |
 {{< /expand >}}
-
-### Address: $020578
 
 ### Inputs:
 * `de`: Location in RAM where memory was inserted or deleted.

@@ -6,9 +6,9 @@ params:
     name: ansFlags
 ---
 
-Answer flags.
-
 ### Address: $D00081 (ti.flags + $01)
+
+Answer flags.
 
 ### Size: 1 byte
 

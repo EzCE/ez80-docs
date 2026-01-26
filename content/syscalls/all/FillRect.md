@@ -7,9 +7,9 @@ params:
     name: FillRect
 ---
 
-Draws a filled rectangle to the screen, using a specified color.
-
 ### Address: $021220
+
+Draws a filled rectangle to the screen, using a specified color.
 
 ### Inputs:
 * `hl`: Top-left X coordinate of the rectangle.
