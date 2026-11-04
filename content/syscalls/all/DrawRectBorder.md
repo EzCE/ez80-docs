@@ -12,7 +12,7 @@ params:
 Draws a one-pixel rectangular border to the screen, using a specified color. See also [DrawThickRectBorder](../DrawThickRectBorder).
 
 {{< hint type=note >}}
-Pass ordered corners `(hl, b)` and `(de, c)` with `hl ≤ de` and `b ≤ c`. Reversed coordinates can cause drawing artifacts or screen corruption.
+Pass ordered corners (hl, b) and (de, c) with hl ≤ de and b ≤ c. Reversed coordinates can cause drawing artifacts or screen corruption.
 {{< /hint >}}
 
 `_DrawRectBorder_` (`$0216DC`) and `_DrawRectBorder__` (`$021BE0`) jump to the same implementation as `_DrawRectBorder`.
@@ -25,7 +25,11 @@ Pass ordered corners `(hl, b)` and `(de, c)` with `hl ≤ de` and `b ≤ c`. Rev
 * Value at [`drawFGColor`](../../../memory/all/drawFGColor) contains the 16-bit color to draw with.
 
 ### Outputs:
-* Draws to the screen when `bufferOnly` (bit 0 of `plotFlag3`) is clear.
+* Draws to the screen.
 
 ### Destroys:
 * `af`
+
+{{< hint type=note >}}
+With `bufferOnly` set, no writes to the LCD framebuffer, `plotSScreen`, or `saveSScreen` were observed.
+{{< /hint >}}
