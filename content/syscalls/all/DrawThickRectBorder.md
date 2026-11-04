@@ -9,7 +9,7 @@ params:
 
 ### Address: $021B04
 
-Draws a two-pixel rectangular border by drawing the specified outline and a second outline one pixel farther out on each side. See also [DrawRectBorder](../DrawRectBorder).
+Draws a two-pixel rectangular border by drawing the specified outline and a second outline one pixel farther out on each side. See also [DrawRectBorder](../DrawRectBorder). Note that calling this routine also disables interrupts.
 
 {{< hint type=note >}}
 Pass ordered corners (hl, b) and (de, c) with hl ≤ de and b ≤ c. Reversed coordinates can cause drawing artifacts or screen corruption.

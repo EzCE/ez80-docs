@@ -9,7 +9,7 @@ params:
 
 ### Address: $02123C
 
-Draws a one-pixel rectangular border to the screen, using a specified color. See also [DrawThickRectBorder](../DrawThickRectBorder).
+Draws a one-pixel rectangular border to the screen, using a specified color. See also [DrawThickRectBorder](../DrawThickRectBorder). Note that calling this routine also disables interrupts.
 
 {{< hint type=note >}}
 Pass ordered corners (hl, b) and (de, c) with hl ≤ de and b ≤ c. Reversed coordinates can cause drawing artifacts or screen corruption.
