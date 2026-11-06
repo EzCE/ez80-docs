@@ -26,6 +26,8 @@ Pass ordered corners (hl, b) and (de, c) with hl ≤ de and b ≤ c. Reversed co
 
 ### Outputs:
 * Draws to the screen.
+* [`plotLoc`](../../../memory/all/flags/plotFlags#bit-1---plotloc) flag set.
+* [`g_style_active`](../../../memory/all/flags/sGrFlags#bit-5---g_style_active) flag reset.
 
 ### Destroys:
 * `af`
